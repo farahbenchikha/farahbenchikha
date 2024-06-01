@@ -30,6 +30,6 @@ Welcome to my Github! I make some fun codes to learn new things and help other p
 ![PHP Badge](https://img.shields.io/badge/-PHP-777BB4?style=flat&logo=php&logoColor=white)
 ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
 
-- 🔭 I’m currently working with programming languages such as C, C++, HTML, JavaScript, and PHP, and the Qt framework.
-- 🌱 I’m currently learning Machine-Learning & Java 
+Let's talk! 
 
+⭐️ From [Farah](https://github.com/farahbenchikha)
