@@ -1,17 +1,14 @@
 <h1 align="center">Hi 👋 I'm Farah </h1>
-<div style="display: inline-block;">
-  <img src="https://img.shields.io/github/followers/farahbenchikha?style=social" alt="githubbadge">
-</div>
-<div style="display: inline-block;">
+<div style="display: flex; align-items: center;">
+  <img src="https://img.shields.io/github/followers/farahbenchikha?style=social" alt="githubbadge" style="margin-right: 10px;">
   <a href="https://www.linkedin.com/in/farah-ben-chikha-76a93325b/">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Farah%20Ben%20Chikha-blue?style=flat&logo=linkedin">
+    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Farah%20Ben%20Chikha-blue?style=flat&logo=linkedin" style="margin-right: 10px;">
   </a>
-</div>
-<div style="display: inline-block;">
   <a href="https://www.instagram.com/farahbenchikha_/">
     <img src="https://img.shields.io/badge/-farahbenchikha__-purple?&logo=instagram&logoColor=white" alt="Instagram Badge">
   </a>
 </div>
+
 
 
 
