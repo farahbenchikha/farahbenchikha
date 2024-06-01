@@ -10,7 +10,7 @@
   </a>
 </div>
 
-Welcome to my Github!:sweat_smile: .
+Welcome to my Github! :sweat_smile: .
 
 ### :star: Some fun facts!
 - I'm pianist;
