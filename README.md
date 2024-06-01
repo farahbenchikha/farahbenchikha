@@ -44,6 +44,7 @@ Welcome to my Github! I make some fun codes to learn new things and help other p
   
 <br/>
 
+![Farah's GitHub Stats](https://github-readme-stats.vercel.app/api?username=farahbenchikha&show_icons=true)
 
 Let's talk! 
 ---
