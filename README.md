@@ -29,7 +29,21 @@ Welcome to my Github! I make some fun codes to learn new things and help other p
 ![JavaScript Badge](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![PHP Badge](https://img.shields.io/badge/-PHP-777BB4?style=flat&logo=php&logoColor=white)
 ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
+---
 
+<br/>
+
+  <h2 align="center"> Github Statistics 📈 </h2>
+  
+  <div align="center"> 
+    <a href="">
+      <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=farahbenchikha&theme=react&line_height=40&hide=css"/>
+    </a>
+</div
+  
+<br/>
+
+---
 Let's talk! 
 
 ⭐️ From [Farah](https://github.com/farahbenchikha)
