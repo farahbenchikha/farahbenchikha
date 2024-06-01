@@ -1,5 +1,8 @@
 <h1 align="center">Hi 👋 I'm Farah </h1>
-<img src="https://raw.githubusercontent.com/hedythedev/hedythedev/master/assets/farahgit.png" alt="Hey, I'm Hedy [banner]" />
+<div>
+    <img src="https://raw.githubusercontent.com/hedythedev/hedythedev/master/assets/farahgit.png" alt="Hey, I'm Farah [banner]" />
+    <p>Hey, I'm Farah [banner]</p>
+</div>
 
 <div style="display: flex; align-items: center;">
   <img src="https://img.shields.io/github/followers/farahbenchikha?style=social" alt="githubbadge" style="margin-right: 10px;">
