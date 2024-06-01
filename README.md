@@ -10,7 +10,7 @@
 </div>
 
 Welcome to my Github! I make some fun codes to learn new things and help other people learn it too (especially from my mistakes :sweat_smile:).
-  <p align="center">
+
  <p align="center">
     <a href="/docs/readme_fr.md">Français</a>
     ·
@@ -34,7 +34,7 @@ Welcome to my Github! I make some fun codes to learn new things and help other p
     .
     <a href="/docs/readme_tr.md">Türkçe</a>
   </p>
-</p>
+
 ### :star: Some fun facts!
 - I'm pianist;
 - I make accessories;
