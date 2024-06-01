@@ -46,8 +46,8 @@ Welcome to my Github! I make some fun codes to learn new things and help other p
  👀 visitor count
 
 <img src="https://profile-counter.glitch.me/farahbenchikha/count.svg" alt="Hello world" />
-
 <hr />
+
 Let's talk! 
 ---
 ### ⭐️ From [Farah](https://github.com/farahbenchikha) ⭐️ ### 
