@@ -1,4 +1,6 @@
 <h1 align="center">Hi 👋 I'm Farah </h1>
+<img src="https://raw.githubusercontent.com/hedythedev/hedythedev/master/assets/farahgit.png" alt="Hey, I'm Hedy [banner]" />
+
 <div style="display: flex; align-items: center;">
   <img src="https://img.shields.io/github/followers/farahbenchikha?style=social" alt="githubbadge" style="margin-right: 10px;">
   <a href="https://www.linkedin.com/in/farah-ben-chikha-76a93325b/">
