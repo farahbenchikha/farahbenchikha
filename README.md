@@ -42,7 +42,11 @@ Welcome to my Github! I make some fun codes to learn new things and help other p
     <img src="https://github-readme-stats.vercel.app/api?username=farahbenchikha&show_icons=true" alt="Farah's GitHub Stats" align="center">
 </div>
 <br/>
+### 👀 visitor count
 
+<img src="https://profile-counter.glitch.me/farahbenchikha/count.svg" alt="Hello world" />
+
+<hr />
 Let's talk! 
 ---
 ### ⭐️ From [Farah](https://github.com/farahbenchikha) ⭐️ ### 
