@@ -48,7 +48,6 @@ Welcome to my Github! :sweat_smile: .
 
 <img src="https://profile-counter.glitch.me/farahbenchikha/count.svg" alt="Hello world" />
 <hr />
-[![trophy](https://github-profile-trophy.vercel.app/?username=farahbenchikha)](https://github.com/farahbenchikha/github-profile-trophy)
 Let's talk! 
 ---
 ### ⭐️ From [Farah](https://github.com/farahbenchikha) ⭐️ ### 
