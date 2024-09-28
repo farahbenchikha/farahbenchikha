@@ -14,7 +14,7 @@
 
 </div>
 
-# 🌟 Hey you, yes you! Welcome to my GitHub 👋
+# 👋 Hey you, yes you! Welcome to my GitHub 👋
 ### :star: Some fun facts!
 - I'm pianist 
 - I make accessories 
