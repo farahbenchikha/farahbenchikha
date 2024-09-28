@@ -13,9 +13,9 @@
 Welcome to my Github! :sweat_smile: .
 
 ### :star: Some fun facts!
-- I'm pianist;
-- I make accessories;
-- I'm right handed  👉:
+- I'm pianist 
+- I make accessories 
+- I'm right handed  👉 
 ##  :calendar: I'm currently  ...
   ### :bar_chart: Studying:
 
