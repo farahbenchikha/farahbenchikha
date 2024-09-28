@@ -32,6 +32,10 @@ Welcome to my Github! :sweat_smile: .
 ![JavaScript Badge](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![PHP Badge](https://img.shields.io/badge/-PHP-777BB4?style=flat&logo=php&logoColor=white)
 ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
+![Java Badge](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white)
+![Twig Badge](https://img.shields.io/badge/-Twig-339933?style=flat&logo=twig&logoColor=white)
+![Symfony Badge](https://img.shields.io/badge/-Symfony-000000?style=flat&logo=symfony&logoColor=white)
+
 ---
 <br/>
 
