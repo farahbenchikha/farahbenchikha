@@ -4,9 +4,10 @@
 
 <div style="display: flex; align-items: center;">
   <img src="https://img.shields.io/github/followers/farahbenchikha?style=social" alt="githubbadge" style="margin-right: 10px;">
-  <a href="https://www.linkedin.com/in/farah-ben-chikha-76a93325b/">
+<a href="https://www.linkedin.com/in/farahbenchikha/">
     <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Farah%20Ben%20Chikha-blue?style=flat&logo=linkedin" style="margin-right: 10px;">
-  </a>
+</a>
+
   <a href="https://www.instagram.com/farahbenchikha_/">
     <img src="https://img.shields.io/badge/-farahbenchikha__-purple?&logo=instagram&logoColor=white" alt="Instagram Badge">
   </a>
