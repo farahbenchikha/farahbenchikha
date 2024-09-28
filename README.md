@@ -8,10 +8,13 @@
   <a href="https://www.instagram.com/farahbenchikha_/">
     <img src="https://img.shields.io/badge/-farahbenchikha__-purple?&logo=instagram&logoColor=white" alt="Instagram Badge">
   </a>
+  <a href="https://www.facebook.com/farah.bc.71">
+  <img src="https://img.shields.io/badge/-farah.bc-blue?&logo=facebook&logoColor=white" alt="Facebook Badge">
+</a>
+
 </div>
 
-Welcome to my Github! :sweat_smile: .
-
+# 🌟 Hey you, yes you! Welcome to my GitHub 👋
 ### :star: Some fun facts!
 - I'm pianist 
 - I make accessories 
@@ -21,7 +24,7 @@ Welcome to my Github! :sweat_smile: .
 
  - At [ESPRIT](https://www.linkedin.com/school/esprit_2/mycompany/verification/) as 𝐈𝐓- 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐒𝐭𝐮𝐝𝐞𝐧𝐭;
  - Using : ![Linux Badge](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black) ![Visual Studio Code Badge](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
-![GitHub](https://img.shields.io/badge/-GitHub-181717?&logo=github) ![CodeBlocks Badge](https://img.shields.io/badge/Code::Blocks-2B2B2B?style=flat&logo=codeblocks) ![Qt Badge](https://img.shields.io/badge/Qt-41CD52?style=flat&logo=qt&logoColor=white) [![Arduino](https://img.shields.io/badge/-Arduino-black?style=flat-square&logo=Arduino&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/)
+![GitHub](https://img.shields.io/badge/-GitHub-181717?&logo=github) ![Symfony Badge](https://img.shields.io/badge/-Symfony-000000?style=flat&logo=symfony&logoColor=white)  ![CodeBlocks Badge](https://img.shields.io/badge/Code::Blocks-2B2B2B?style=flat&logo=codeblocks) ![Qt Badge](https://img.shields.io/badge/Qt-41CD52?style=flat&logo=qt&logoColor=white) [![Arduino](https://img.shields.io/badge/-Arduino-black?style=flat-square&logo=Arduino&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/) 
 
 
 ### :books: Learning:
@@ -34,7 +37,7 @@ Welcome to my Github! :sweat_smile: .
 ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Java Badge](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white)
 ![Twig Badge](https://img.shields.io/badge/-Twig-339933?style=flat&logo=twig&logoColor=white)
-![Symfony Badge](https://img.shields.io/badge/-Symfony-000000?style=flat&logo=symfony&logoColor=white)
+
 
 ---
 <br/>
