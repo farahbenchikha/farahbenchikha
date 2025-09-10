@@ -1,75 +1,106 @@
-<h1 align="center"> 👋 Hey you, yes you! Welcome to my GitHub 👋 </h1>
-<h2 align="center"> 👋 I'm Ben Chikha Farah 👋 </h2>
-<h3 align="center"> 𝐈’𝐦 𝐚 𝐟𝐢𝐫𝐬𝐭-𝐲𝐞𝐚𝐫 𝐂𝐨𝐦𝐩𝐮𝐭𝐞𝐫 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐬𝐭𝐮𝐝𝐞𝐧𝐭 💻 </h3>
+<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=farahbenchikha.farahbenchikha" />
 
-<div style="display: flex; align-items: center;">
-  <img src="https://img.shields.io/github/followers/farahbenchikha?style=social" alt="githubbadge" style="margin-right: 10px;">
-<a href="https://www.linkedin.com/in/farahbenchikha/">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Farah%20Ben%20Chikha-blue?style=flat&logo=linkedin" style="margin-right: 10px;">
-</a>
+<h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hey+you!+👋;+I'm+Farah+Ben+Chikha!;" />
+</h1>
 
-  <a href="https://www.instagram.com/farahbenchikha_/">
-    <img src="https://img.shields.io/badge/-farahbenchikha__-purple?&logo=instagram&logoColor=white" alt="Instagram Badge">
-  </a>
-  <a href="https://www.facebook.com/farah.bc.71">
-  <img src="https://img.shields.io/badge/-farah.bc-blue?&logo=facebook&logoColor=white" alt="Facebook Badge">
-</a>
+<h3 align="center">A Computer Engineering Student from Tunisia 🇹🇳</h3>
+
+<br/>
+
+<div align="center">
+
+🔭 I’m currently studying at **ESPRIT Engineering School**  
+
+🌱 I’m learning **C, C++, Java, Python, PHP, Symfony, Qt, Arduino**  
+
+🎹 Fun fact: I’m also a **pianist** and I **make handmade accessories** 🎨  
+
+💬 Ask me about **Symfony, JavaFX, Qt, Arduino, or anything [here](https://github.com/farahbenchikha/farahbenchikha/issues)**  
 
 </div>
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=farahbenchikha)](https://github.com/ryo-ma/github-profile-trophy)
+---
 
-### :star: Some fun facts!  :star:
-- I'm pianist 
-- I make accessories 
-- I'm right handed  👉 
-##  :calendar: I'm currently  ...
-  ### :bar_chart: Studying:
-
- - At [ESPRIT](https://www.linkedin.com/school/esprit_2/mycompany/verification/) as 𝐈𝐓- 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐒𝐭𝐮𝐝𝐞𝐧𝐭 
- - Using : ![Linux Badge](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black) ![Visual Studio Code Badge](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
-![GitHub](https://img.shields.io/badge/-GitHub-181717?&logo=github) ![Symfony Badge](https://img.shields.io/badge/-Symfony-000000?style=flat&logo=symfony&logoColor=white)  ![CodeBlocks Badge](https://img.shields.io/badge/Code::Blocks-2B2B2B?style=flat&logo=codeblocks) ![Qt Badge](https://img.shields.io/badge/Qt-41CD52?style=flat&logo=qt&logoColor=white) [![Arduino](https://img.shields.io/badge/-Arduino-black?style=flat-square&logo=Arduino&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/) 
-
-
-### :books: Learning:
-![C Badge](https://img.shields.io/badge/-C-A8B9CC?style=flat&logo=c)
-![C++ Badge](https://img.shields.io/badge/-C++-00599C?style=flat&logo=c%2B%2B)
-![HTML Badge](https://img.shields.io/badge/-HTML-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS Badge](https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3)
-![JavaScript Badge](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![PHP Badge](https://img.shields.io/badge/-PHP-777BB4?style=flat&logo=php&logoColor=white)
-![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
-![Java Badge](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white)
-![Twig Badge](https://img.shields.io/badge/-Twig-339933?style=flat&logo=twig&logoColor=white)
+<h3 align="left"> 📫 Connect with me :</h3>
+<p align="left">
+<a href="https://www.linkedin.com/in/farahbenchikha/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="Farah LinkedIn" height="30" width="40" /></a>
+<a href="https://www.instagram.com/farahbenchikha_/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="Instagram" height="30" width="40" /></a>
+<a href="https://www.facebook.com/farah.bc.71" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="Facebook" height="30" width="40" /></a>
+</p>
 
 ---
-<br/>
-<h2 align="center"> Github Statistics 📈 </h2>
+
+# 🛠️ Main Skills 
+
+<a href="https://www.php.net/manual/en/index.php"><img src="https://skillicons.dev/icons?i=php" alt="PHP" height="80" title="PHP"></a>
+<a href="https://symfony.com/doc/current/index.html"><img src="https://skillicons.dev/icons?i=symfony" alt="Symfony" height="80" title="Symfony"></a>
+<a href="https://www.qt.io/"><img src="https://skillicons.dev/icons?i=qt" alt="Qt" height="80" title="Qt"></a>
+<a href="https://www.arduino.cc/reference/en/"><img src="https://skillicons.dev/icons?i=arduino" alt="Arduino" height="80" title="Arduino"></a>
+<a href="https://www.python.org/doc/"><img src="https://skillicons.dev/icons?i=python" alt="Python" height="80" title="Python"></a>
+<a href="https://www.java.com/"><img src="https://skillicons.dev/icons?i=java" alt="Java" height="80" title="Java"></a>
+<a href="https://en.cppreference.com/"><img src="https://skillicons.dev/icons?i=cpp" alt="C++" height="80" title="C++"></a>
+<a href="https://en.wikipedia.org/wiki/C_(programming_language)"><img src="https://skillicons.dev/icons?i=c" alt="C" height="80" title="C"></a>
+
+---
+
+# 💻 Tools & Technologies I Use
+
+<div style="display: flex; align-items: flex-start; align: center">
+<table align="center">
+  <tr>
+    <td align="center" width="96">
+        <img src="https://techstack-generator.vercel.app/react-icon.svg" width="65" height="65" />
+      <br>React
+    </td>
+    <td align="center" width="96">
+        <img src="https://techstack-generator.vercel.app/python-icon.svg" width="65" height="65" />
+      <br>Python
+    </td>
+    <td align="center" width="96">
+        <img src="https://techstack-generator.vercel.app/js-icon.svg" width="65" height="65" />
+      <br>JavaScript
+    </td>
+    <td align="center" width="96">
+        <img src="https://techstack-generator.vercel.app/cpp-icon.svg" width="65" height="65" />
+      <br>C++
+    </td>
+    <td align="center" width="96">
+        <img src="https://techstack-generator.vercel.app/mysql-icon.svg" width="65" height="65" />
+      <br>MySQL
+    </td>
+    <td align="center" width="96">
+        <img src="https://skillicons.dev/icons?i=git" width="48" height="48" />
+      <br>Git
+    </td>
+    <td align="center" width="96">
+        <img src="https://skillicons.dev/icons?i=github" width="48" height="48" />
+      <br>GitHub
+    </td>
+    <td align="center" width="96">
+        <img src="https://skillicons.dev/icons?i=vscode" width="48" height="48" />
+      <br>VS Code
+    </td>
+  </tr>
+</table>
+</div>
+
+---
+
+<h2 align="center"> 📊 GitHub Statistics </h2>
 <div align="center"> 
-    <a href="">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=farahbenchikha&layout=compact&theme=default&bg_color=FFFFFF" alt="Most Used Languages" />
-    </a>
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=farahbenchikha&layout=compact&theme=default&bg_color=FFFFFF" alt="Most Used Languages" />
+    <br/>
     <img src="https://github-readme-stats.vercel.app/api?username=farahbenchikha&show_icons=true&theme=default&bg_color=FFFFFF" alt="Farah's GitHub Stats" />
 </div>
 
-<div align="center">
-    <br/>
-    <h3 align="center">Détails des Contributions</h3>
-    <p align="center">
-        <img src="https://img.shields.io/badge/Total%20Contributions-41-blue" />
-        <img src="https://img.shields.io/badge/Current%20Streak-0-orange" />
-        <img src="https://img.shields.io/badge/Longest%20Streak-2-yellow" />
-    </p>
-</div>
-
-
- 👀 visitor count
-
-<img src="https://profile-counter.glitch.me/farahbenchikha/count.svg" alt="Hello world" />
-<hr />
-Let's talk! 
----
-### ⭐️ From [Farah](https://github.com/farahbenchikha) ⭐️ ### 
 ---
 
+<h3 align="center"> 🐍 Contributions </h3>
+<p align="center">
+  <img alt="snake animation" src="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/output/github-contribution-grid-snake.svg" />
+</p>
 
+---
+
+⭐️ From [Farah](https://github.com/farahbenchikha) ⭐️
