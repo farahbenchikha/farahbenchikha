@@ -96,12 +96,4 @@
 
 ---
 
-<h3 align="center"> 🐍 Contributions </h3>
-<p align="center">
-  <img alt="snake animation" src="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/output/github-contribution-grid-snake.svg" />
-</p>
-
-
----
-
 ⭐️ From [Farah](https://github.com/farahbenchikha) ⭐️
