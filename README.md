@@ -1,5 +1,7 @@
+<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=farahbenchikha.farahbenchikha" />
+
 <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Righteous&size=34&center=true&vCenter=true&width=600&height=70&duration=4000&lines=Hey+there!+👋;I'm+Farah+Ben+Chikha;Cloud+%26+DevOps+Engineer;AIOps+%26+GitOps+Enthusiast;Welcome+to+my+GitHub!;" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hey+you!+👋;+I'm+Farah+Ben+Chikha!;" />
 </h1>
 
 <h3 align="center">
