@@ -83,7 +83,6 @@
 - 🤖 **GitHub / Microsoft:** Foundations in Agentic AI (2026)
 - 🧠 **NVIDIA Deep Learning Institute:** Anomaly Detection & Deep Learning (2025)
 - ⚙️ **Data Engineering & MLOps** (2026)
-- 🏆 **Finalist:** Tech4Good Lebanon/Tunisia Challenge (IEEE SIGHT)
 
 ---
 
