@@ -2,17 +2,21 @@
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
-<!--                         HERO / IDENTITY                        -->
+<!--                         FARAH.SH / HERO                         -->
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
-<a href="https://github.com/farahbenchikha">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=2800&pause=900&color=9B8AFB&center=true&vCenter=true&width=950&lines=Farah+Ben+Chikha+%E2%80%94+Cloud+%26+DevOps+Engineer;Kubernetes+%7C+GitOps+%7C+DevSecOps+%7C+AIOps;Building+Cloud+Infrastructure+that+thinks+%F0%9F%A7%A0;ESPRIT+%F0%9F%87%B9%F0%9F%87%B3+%C3%97+China+%F0%9F%87%A8%F0%9F%87%B3" alt="Typing introduction">
-</a>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/farah-banner-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/farah-banner-light.png">
+  <img src="assets/farah-banner-dark.png" width="100%" alt="Farah Ben Chikha — Cloud and DevOps Engineer">
+</picture>
 
 <br><br>
 
-<img src="https://komarev.com/ghpvc/?username=farahbenchikha&style=flat&color=9B8AFB&label=PROFILE+VIEWS" alt="Profile views">
+<a href="https://github.com/farahbenchikha">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=25&duration=2800&pause=900&color=21D4C5&center=true&vCenter=true&width=950&lines=Farah+Ben+Chikha+%7C+Cloud+%26+DevOps+Engineer;Kubernetes+%7C+GitOps+%7C+DevSecOps+%7C+AIOps;Building+infrastructure+that+automates%2C+observes+%26+adapts;ESPRIT+%F0%9F%87%B9%F0%9F%87%B3+%C3%97+China+%F0%9F%87%A8%F0%9F%87%B3" alt="Typing introduction">
+</a>
 
 <br><br>
 
@@ -21,34 +25,39 @@
 </a>
 &nbsp;
 <a href="mailto:farah.benchikha@esprit.tn">
-  <img src="https://img.shields.io/badge/Email-0d1117?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email">
+  <img src="https://img.shields.io/badge/Email-17252B?style=for-the-badge&logo=gmail&logoColor=F4A261" alt="Email">
 </a>
 &nbsp;
 <a href="https://github.com/farahbenchikha">
-  <img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=9B8AFB" alt="GitHub">
+  <img src="https://img.shields.io/badge/GitHub-17252B?style=for-the-badge&logo=github&logoColor=21D4C5" alt="GitHub">
 </a>
 &nbsp;
 <a href="https://www.instagram.com/farahbenchikha_/">
-  <img src="https://img.shields.io/badge/Instagram-0d1117?style=for-the-badge&logo=instagram&logoColor=E4405F" alt="Instagram">
+  <img src="https://img.shields.io/badge/Instagram-17252B?style=for-the-badge&logo=instagram&logoColor=E76F51" alt="Instagram">
 </a>
 
-</div>
+<br><br>
 
----
+<img src="https://komarev.com/ghpvc/?username=farahbenchikha&style=flat&color=21D4C5&label=PROFILE+VIEWS" alt="Profile views">
+
+</div>
 
 <div align="center">
 
-## `$ whoami`
+$ whoami
 
 </div>
 
-```yaml
 name: Farah Ben Chikha
-role: Computer Engineering Student
+role: Cloud & DevOps Engineer
+education: Computer Engineering — Cloud Computing
+location: Tunisia 🇹🇳
+
 focus:
-  - Cloud Engineering
+  - Cloud Infrastructure
   - DevOps
   - DevSecOps
+  - Kubernetes
   - Platform Engineering
   - AIOps
 
@@ -56,60 +65,57 @@ currently:
   building: Kubernetes Enterprise Platforms
   exploring:
     - GitOps
-    - Kubernetes
     - MCP
     - K8sGPT
     - Agentic AI
     - eBPF
-
-education:
-  Tunisia: ESPRIT
-  China: Beijing Polytechnic University
+    - Intelligent Infrastructure
 
 target:
   "6-month End-of-Study Internship (PFE)"
   "Cloud / DevOps / SRE / Platform Engineering"
-```
 
 <div align="center">
 
-> ☁️ **I build infrastructure that is automated, observable, secure — and increasingly intelligent.**
+I build infrastructure that is automated, observable, secure — and increasingly intelligent.
 
 </div>
 
----
+👩🏻‍💻 About Me
 
-## 🧠 About Me
+Hi! I'm Farah, a computer engineering student specializing in Cloud Computing.
 
-I'm **Farah**, a computer engineering student specializing in **Cloud Computing**, with a strong interest in the infrastructure layer behind modern applications.
+I enjoy working at the infrastructure layer: designing platforms, automating deployments, orchestrating containers, securing workloads and turning observability data into actionable intelligence.
 
-My playground sits at the intersection of:
+My technical interests live at the intersection of:
 
-**☁️ Cloud Infrastructure** · **⚙️ DevOps** · **🔐 DevSecOps** · **☸️ Kubernetes** · **🤖 AIOps**
+☁️ Cloud · ⚙️ DevOps · ☸️ Kubernetes · 🔐 DevSecOps · 📊 Observability · 🤖 AIOps
 
-I'm particularly interested in transforming manual infrastructure into **automated, reproducible and self-healing platforms**.
+Currently building
 
-### What I'm building
+☸️ Kubernetes Enterprise Platforms
 
-* ☸️ **Kubernetes Enterprise Platforms** with HA architectures
-* 🔄 **GitOps workflows** with Argo CD
-* 🏗️ **Infrastructure as Code** with Terraform & Ansible
-* 🔐 **DevSecOps pipelines** and secrets management
-* 📊 **Observability platforms** with Prometheus, Grafana & ELK
-* 🤖 **AIOps diagnostic loops** with K8sGPT & AI
-* 🧠 Exploring **MCP, Agentic AI & intelligent infrastructure**
+🏗️ Infrastructure as Code with Terraform & Ansible
 
-And outside the terminal...
+🔄 GitOps workflows with Argo CD
 
-🎹 I'm a **pianist**
-🎨 I create **handmade accessories**
-🌍 I'm fascinated by international technology ecosystems
+🔐 Secrets & security with Vault
 
----
+📊 Observability with Prometheus, Grafana & ELK
+
+🤖 AI-assisted Kubernetes diagnostics with K8sGPT
+
+🧠 Exploring MCP, Agentic AI & intelligent infrastructure
+
+Outside the terminal
+
+🎹 Piano enthusiast
+🎨 Handmade accessories creator
+🌍 International technology & cultural experiences
 
 <div align="center">
 
-## 🌍 From Tunisia to China
+🌍 Tunisia → China → Global Cloud Engineering
 
 </div>
 
@@ -117,28 +123,29 @@ And outside the terminal...
 <tr>
 <td align="center" width="45%">
 
-### 🇹🇳 Tunisia
-
-**ESPRIT**
+🇹🇳 ESPRIT
 
 Computer Engineering
+
 Cloud Computing
+DevOps · Infrastructure · AI
 
 </td>
 
 <td align="center" width="10%">
 
-### →
+→
 
 </td>
 
 <td align="center" width="45%">
 
-### 🇨🇳 China
+🇨🇳 Beijing Polytechnic University
 
-**Beijing Polytechnic University**
+International Academic Experience
 
-Computer Science / Cloud-oriented studies
+Computer Science
+Cloud & Technology Ecosystems
 
 </td>
 </tr>
@@ -146,205 +153,215 @@ Computer Science / Cloud-oriented studies
 
 <div align="center">
 
-**Building bridges between cloud engineering, AI and international technology ecosystems.**
+⚡ Engineering Stack
 
 </div>
 
----
+☁️ Cloud, Infrastructure & IaC
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=kubernetes,docker,terraform,ansible,azure,aws,linux,bash&perline=8" alt="Cloud and Infrastructure">
+</p>
+
+<p align="center">
+  <code>Kubernetes</code>
+  <code>Docker</code>
+  <code>Terraform</code>
+  <code>Ansible</code>
+  <code>Azure</code>
+  <code>AWS</code>
+  <code>OpenStack</code>
+  <code>Linux</code>
+</p>
+
+🔄 DevOps, GitOps & Platform Engineering
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=git,github,githubactions,argo&perline=4" alt="DevOps and GitOps">
+</p>
+
+<p align="center">
+  <code>Git</code>
+  <code>GitHub</code>
+  <code>CI/CD</code>
+  <code>Argo CD</code>
+  <code>GitOps</code>
+  <code>Platform Engineering</code>
+</p>
+
+🔐 Security & Observability
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=prometheus,grafana,elasticsearch&perline=3" alt="Observability">
+</p>
+
+<p align="center">
+  <code>DevSecOps</code>
+  <code>Vault</code>
+  <code>ELK</code>
+  <code>Prometheus</code>
+  <code>Grafana</code>
+  <code>eBPF</code>
+  <code>Kubernetes Security</code>
+</p>
+
+🤖 AI, Data & Intelligent Infrastructure
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,sklearn,pytorch&perline=3" alt="AI and Data">
+</p>
+
+<p align="center">
+  <code>Python</code>
+  <code>Scikit-learn</code>
+  <code>Deep Learning</code>
+  <code>MLOps</code>
+  <code>AIOps</code>
+  <code>K8sGPT</code>
+  <code>MCP</code>
+  <code>Agentic AI</code>
+</p>
+
+💻 Software Engineering
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=java,spring,angular,python,cpp,c,php,mysql,postman&perline=9" alt="Software Engineering">
+</p>
+
+<p align="center">
+  <code>Java</code>
+  <code>Spring Boot</code>
+  <code>Angular</code>
+  <code>Python</code>
+  <code>C/C++</code>
+  <code>PHP</code>
+  <code>MySQL</code>
+  <code>REST APIs</code>
+</p>
 
 <div align="center">
 
-## ⚡ My Engineering Stack
+🚀 Featured Projects
 
 </div>
 
-### ☁️ Cloud & Infrastructure
+☸️ Kubernetes Enterprise Platform
 
-<p align="center">
-<img src="https://skillicons.dev/icons?i=kubernetes,docker,terraform,ansible,azure,aws,linux,bash&perline=8" alt="Cloud and Infrastructure stack">
-</p>
+Cloud Infrastructure · DevSecOps · Observability · AIOps
 
-<p align="center">
+A production-inspired Kubernetes platform focused on automation, security, observability and intelligent operations.
 
-`Kubernetes` · `Docker` · `Terraform` · `Ansible` · `Azure` · `AWS` · `Linux` · `OpenStack`
+                         ┌───────────────────┐
+                         │    DEVELOPER      │
+                         └─────────┬─────────┘
+                                   │
+                                   ▼
+                         ┌───────────────────┐
+                         │      GITHUB       │
+                         │   SOURCE OF TRUTH │
+                         └─────────┬─────────┘
+                                   │
+                                   ▼
+                         ┌───────────────────┐
+                         │      ARGO CD      │
+                         │       GITOPS      │
+                         └─────────┬─────────┘
+                                   │
+                                   ▼
+              ┌─────────────────────────────────────┐
+              │         KUBERNETES PLATFORM         │
+              │                                     │
+              │ Applications · Services · Ingress   │
+              │                                     │
+              │ Vault · Monitoring · Logging        │
+              └─────────────────┬───────────────────┘
+                                │
+                  ┌─────────────┼──────────────┐
+                  ▼             ▼              ▼
+             Prometheus       ELK           K8sGPT
+                  │             │              │
+                  └─────────────┼──────────────┘
+                                ▼
+                         🤖 AI DIAGNOSIS
+                                │
+                                ▼
+                       ASSISTED RESOLUTION
 
-</p>
+Stack
 
----
+Kubernetes Terraform Ansible Argo CD Vault ELK K8sGPT Gemini GitHub
 
-### 🔄 DevOps / GitOps / Platform Engineering
+🏋️ Pour la Forme
 
-<p align="center">
-<img src="https://skillicons.dev/icons?i=git,github,githubactions,argo,prometheus,grafana&perline=6" alt="DevOps stack">
-</p>
+Cloud-native application · Microservices · AI
 
-<p align="center">
+A full-stack sports and wellness platform combining application engineering, cloud infrastructure and AI capabilities.
 
-`Git` · `GitHub` · `CI/CD` · `Argo CD` · `GitOps` · `Prometheus` · `Grafana`
+Application
 
-</p>
+Angular → Spring Boot → MySQL
 
----
+Infrastructure
 
-### 🔐 Security & Observability
+Docker · Kubernetes · Ansible · OpenStack · Heat · Azure Container Apps
 
-<p align="center">
+AI
 
-`DevSecOps` · `Vault` · `ELK` · `K8sGPT` · `eBPF` · `Kubernetes Security`
+Ollama · Chatbot · Analytics · AI-generated descriptions
 
-</p>
+📦 Intelligent Retail Decision System
 
-<p align="center">
-<img src="https://skillicons.dev/icons?i=elasticsearch,grafana,prometheus,git,github&perline=5" alt="Security and Observability stack">
-</p>
+Machine Learning · Data Engineering
 
----
+A machine-learning platform designed to support retail decision-making through:
 
-### 🤖 AI / Data / Intelligent Infrastructure
+📈 Demand forecasting
 
-<p align="center">
-<img src="https://skillicons.dev/icons?i=python,sklearn,pytorch&perline=5" alt="AI stack">
-</p>
+🚨 Stockout detection
 
-<p align="center">
+👥 Segmentation with DBSCAN
 
-`Python` · `Scikit-learn` · `Deep Learning` · `MLOps` · `Agentic AI` · `MCP` · `AIOps`
+📊 Regression & classification
 
-</p>
+🧠 Reusable ML models with Joblib
 
----
+Stack
 
-### 💻 Software Engineering
+Python · Pandas · Scikit-learn · Flask · DBSCAN · Joblib
 
-<p align="center">
-<img src="https://skillicons.dev/icons?i=java,spring,angular,python,cpp,c,php,mysql,postman&perline=9" alt="Software engineering stack">
-</p>
+🎫 Eventify
 
-<p align="center">
+Desktop + Web + Mobile Application
 
-`Java` · `Spring Boot` · `Angular` · `Python` · `C/C++` · `PHP` · `MySQL` · `REST APIs`
+A multi-platform event management project developed using:
 
-</p>
-
----
+JavaFX · Symfony · PHP · FlutterFlow
 
 <div align="center">
 
-## 🚀 Featured Engineering Projects
+🧪 Current Research & Exploration
 
 </div>
 
-### ☸️ Kubernetes Enterprise Platform
-
-**Cloud Infrastructure · DevSecOps · Observability · AIOps**
-
-A production-inspired Kubernetes platform designed around automation, security and intelligent operations.
-
-```text
-                        ┌─────────────────────┐
-                        │      Developer      │
-                        └──────────┬──────────┘
-                                   │
-                                   ▼
-                        ┌─────────────────────┐
-                        │       GitHub        │
-                        │   Source of Truth   │
-                        └──────────┬──────────┘
-                                   │
-                                   ▼
-                        ┌─────────────────────┐
-                        │      Argo CD        │
-                        │       GitOps        │
-                        └──────────┬──────────┘
-                                   │
-                                   ▼
-              ┌────────────────────────────────────────┐
-              │            Kubernetes Cluster          │
-              │                                        │
-              │  Applications · Services · Ingress    │
-              │                                        │
-              │  Vault · Monitoring · Logging          │
-              └───────────────┬────────────────────────┘
-                              │
-              ┌───────────────┼────────────────┐
-              ▼               ▼                ▼
-          Prometheus        ELK             K8sGPT
-              │               │                │
-              └───────────────┼────────────────┘
-                              ▼
-                       🤖 AI Diagnosis
-                              │
-                              ▼
-                    Assisted Resolution
-```
-
-**Core stack**
-
-`Kubernetes` `Terraform` `Ansible` `Argo CD` `Vault` `ELK` `K8sGPT` `Gemini` `GitHub`
-
----
-
-### 🏋️ Pour la Forme
-
-**Cloud-native application · Microservices · AI**
-
-A complete sports and wellness platform combining software engineering with cloud infrastructure.
-
-**Architecture**
-
-`Angular` → `Spring Boot` → `MySQL`
-
-**Infrastructure**
-
-`Docker` · `Kubernetes` · `Ansible` · `OpenStack` · `Heat` · `Azure Container Apps`
-
-**AI layer**
-
-`Ollama` · Chatbot · Analytics · AI-generated descriptions
-
----
-
-### 📦 Intelligent Retail Decision System
-
-**Machine Learning · Data Engineering**
-
-A data-driven system designed to support retail decision-making through:
-
-* 📈 Demand forecasting
-* 🚨 Stockout detection
-* 👥 Customer/product segmentation
-* 📊 Regression & classification
-* 🧠 Machine learning pipelines
-
-**Stack**
-
-`Python` · `Pandas` · `Scikit-learn` · `Flask` · `DBSCAN` · `Joblib`
-
----
-
-<div align="center">
-
-## 🧪 Currently Exploring
-
-<table>
+<table align="center">
 <tr>
 <td align="center" width="25%">
 
-### ☸️
+☸️
 
-**Kubernetes**
+Kubernetes
 
-Advanced orchestration
 HA clusters
 Networking
+Orchestration
 
 </td>
 
 <td align="center" width="25%">
 
-### 🤖
+🤖
 
-**AIOps**
+AIOps
 
 AI diagnostics
 K8sGPT
@@ -354,99 +371,136 @@ Self-healing
 
 <td align="center" width="25%">
 
-### 🔐
+🔐
 
-**DevSecOps**
+DevSecOps
 
-Security automation
 Secrets
 Runtime security
+Automation
 
 </td>
 
 <td align="center" width="25%">
 
-### 🧠
+🧠
 
-**Agentic AI**
+Agentic AI
 
 MCP
-AI agents
+Agents
 Tool orchestration
 
 </td>
 </tr>
 </table>
 
-</div>
-
----
-
 <div align="center">
 
-## 📜 Certifications & Learning
+📜 Certifications & Learning
 
 </div>
 
-| Certification / Program             | Organization       | Year |
-| ----------------------------------- | ------------------ | ---: |
-| ☁️ Cloud Computing                  | Microsoft          | 2026 |
-| 🤖 Foundations in Agentic AI        | GitHub × Microsoft | 2026 |
-| 📊 Data Engineering & MLOps         | —                  | 2026 |
-| 🛡️ AI Security & GenAI Red Teaming | —                  | 2026 |
-| 🌐 CCNA                             | Cisco              | 2025 |
-| 🧠 Fundamentals of Deep Learning    | NVIDIA             | 2025 |
-| 🔎 Anomaly Detection                | NVIDIA             | 2025 |
-| ☁️ Exploring SAP Cloud ERP          | SAP                | 2024 |
+Certification / Program
 
----
+Organization
+
+Year
+
+☁️ Describe Cloud Computing
+
+Microsoft
+
+2026
+
+🤖 Foundations in Agentic AI
+
+GitHub × Microsoft
+
+2026
+
+📊 Data Engineering & MLOps
+
+—
+
+2026
+
+🛡️ AI Security & GenAI Red Teaming
+
+—
+
+2026
+
+🌐 CCNA
+
+Cisco
+
+2025
+
+🧠 Fundamentals of Deep Learning
+
+NVIDIA
+
+2025
+
+🔎 Anomaly Detection
+
+NVIDIA
+
+2025
+
+☁️ Exploring SAP Cloud ERP
+
+SAP
+
+2024
 
 <div align="center">
 
-## 🏆 Beyond the Code
+🏆 Community & Experiences
 
 </div>
 
 <table align="center">
 <tr>
-<td align="center">
+<td align="center" width="25%">
 
-### 🥇
+🥇
 
-**1st Prize**
+1st Prize
 
 SDC 3.0
 Tech + Non-Tech Challenge
 
 </td>
 
-<td align="center">
+<td align="center" width="25%">
 
-### 🌍
+🌐
 
-**IEEE**
+IEEE
 
 Member
 WIE · SIGHT · MTTS
 
 </td>
 
-<td align="center">
+<td align="center" width="25%">
 
-### 🤖
+🤖
 
-**MASSAI 2026**
+MASSAI 2026
 
-AI Summer School
-Agentic AI · MLOps · AI Security
+Agentic AI
+MLOps · AI Security
 
 </td>
 
-<td align="center">
+<td align="center" width="25%">
 
-### 🇯🇵
+🇯🇵
 
-**GCI World 2026**
+GCI World 2026
 
 University of Tokyo
 AI / Deep Learning
@@ -455,11 +509,9 @@ AI / Deep Learning
 </tr>
 </table>
 
----
-
 <div align="center">
 
-## 📊 GitHub Signals
+📊 GitHub Signals
 
 <br>
 
@@ -477,55 +529,41 @@ AI / Deep Learning
 
 </div>
 
----
-
 <div align="center">
 
-## 💬 Let's Connect
+💼 Open to PFE Opportunities
 
-I'm currently looking for a **6-month End-of-Study Internship (PFE)** starting in **2027**, focused on:
+I'm looking for a 6-month End-of-Study Internship (PFE) focused on:
 
-`Cloud Engineering` · `DevOps` · `DevSecOps` · `SRE` · `Platform Engineering` · `AIOps`
+Cloud Engineering · DevOps · DevSecOps · SRE · Platform Engineering · AIOps
 
-<br>
-
-If you're building infrastructure, platforms or intelligent cloud systems —
-
-**I'd love to talk.**
-
-<br>
+Interested in building reliable infrastructure?
 
 <a href="mailto:farah.benchikha@esprit.tn">
-  <img src="https://img.shields.io/badge/Let's%20Talk-9B8AFB?style=for-the-badge&logo=gmail&logoColor=white" alt="Let's talk">
+  <img src="https://img.shields.io/badge/Let's%20Talk-21D4C5?style=for-the-badge&logo=gmail&logoColor=17252B" alt="Let's talk">
 </a>
 
 </div>
 
----
-
 <div align="center">
 
-<br>
+$ farah --mission
 
-```text
-$ echo "build → automate → secure → observe → improve"
-
-☁️  Cloud
-   ↓
-⚙️  Automation
-   ↓
-🔐  Security
-   ↓
-📊  Observability
-   ↓
-🤖  Intelligence
-   ↓
-🚀  Better Infrastructure
-```
+┌──────────────────────────────────────────────┐
+│                                              │
+│   BUILD        AUTOMATE        SECURE        │
+│      ↓             ↓              ↓          │
+│   OBSERVE  ────→  LEARN  ────→  IMPROVE      │
+│                                              │
+│             ☁️  CLOUD INFRA                  │
+│                 +                          │
+│             🤖  INTELLIGENCE                 │
+│                                              │
+└──────────────────────────────────────────────┘
 
 <br>
 
-<sub>Built with ☕, curiosity and a lot of terminal sessions.</sub>
+<sub>Built with ☕, curiosity, Kubernetes and too many terminal sessions.</sub>
 
 <br><br>
 
