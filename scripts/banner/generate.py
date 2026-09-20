@@ -8,6 +8,7 @@ Run from repository root:
 """
 
 from __future__ import annotations
+import html
 import math
 from pathlib import Path
 import numpy as np
@@ -99,7 +100,6 @@ def extract_portrait_points(theme_name: str, seed: int = 42) -> np.ndarray:
     source = Image.open(SOURCE).convert("RGB")
     w, h = source.size
     
-    # Crop head and shoulders accurately
     crop = source.crop((int(w * 0.08), int(h * 0.02), int(w * 0.92), int(h * 0.88)))
     crop = crop.resize((300, 340), Image.Resampling.LANCZOS)
     
@@ -121,10 +121,8 @@ def extract_portrait_points(theme_name: str, seed: int = 42) -> np.ndarray:
     if len(xs) == 0:
         return np.zeros((0, 2), dtype=np.float32)
 
-    # Place inside VISUAL.MAP box (top-left offset x=74, y=154)
     points = np.column_stack((74 + xs, 154 + ys)).astype(np.float32)
     
-    # Downsample points for optimal SVG size (~1800-2000 points)
     target_count = 2000
     if len(points) > target_count:
         indices = rng.choice(len(points), size=target_count, replace=False)
@@ -224,9 +222,12 @@ def generate_svg(theme_name: str) -> str:
         val_col = theme["text"] if not is_grid else theme["portrait"]
         font_w = "700" if is_grid or label == "Subject" else "500"
         
+        escaped_label = html.escape(label.upper())
+        escaped_val = html.escape(value)
+        
         row_elements.append(f'''    <g transform="translate(485, {y_pos})">
-      <text x="0" y="0" fill="{label_col}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">{label.upper()}</text>
-      <text x="145" y="0" fill="{val_col}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="{font_w}">{value}</text>
+      <text x="0" y="0" fill="{label_col}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">{escaped_label}</text>
+      <text x="145" y="0" fill="{val_col}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="{font_w}">{escaped_val}</text>
       <line x1="0" y1="10" x2="640" y2="10" stroke="{theme['line']}" stroke-width="0.5" opacity="0.4"/>
     </g>''')
 

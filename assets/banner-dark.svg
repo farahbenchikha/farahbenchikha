@@ -159,7 +159,7 @@
     </g>
     <g transform="translate(485, 182)">
       <text x="0" y="0" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">ROLE</text>
-      <text x="145" y="0" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500">Cloud & DevOps Engineer</text>
+      <text x="145" y="0" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500">Cloud &amp; DevOps Engineer</text>
       <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
     </g>
     <g transform="translate(485, 216)">
