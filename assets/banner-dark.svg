@@ -1,722 +1,222 @@
-<svg width="1200" height="560" viewBox="0 0 1200 560"
-  xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="610" viewBox="0 0 1180 610" role="img" aria-labelledby="title desc">
+  <title id="title">Farah Ben Chikha — Terminal Profile</title>
+  <desc id="desc">Live animated dithered dot-matrix portrait and telemetry system profile for Farah Ben Chikha, Cloud &amp; DevOps Engineer.</desc>
 
   <defs>
-
-```
-<!-- BACKGROUND -->
-<linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0%" stop-color="#071417"/>
-  <stop offset="55%" stop-color="#091B1E"/>
-  <stop offset="100%" stop-color="#0D2427"/>
-</linearGradient>
-
-<!-- PANEL -->
-<linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0%" stop-color="#0D2023"/>
-  <stop offset="100%" stop-color="#102A2D"/>
-</linearGradient>
-
-<!-- PHOTO CLIP -->
-<clipPath id="photoClip">
-  <circle cx="275" cy="270" r="126"/>
-</clipPath>
-
-<!-- GLOW -->
-<filter id="softGlow"
-        x="-50%"
-        y="-50%"
-        width="200%"
-        height="200%">
-
-  <feGaussianBlur
-    stdDeviation="4"
-    result="blur"/>
-
-  <feMerge>
-    <feMergeNode in="blur"/>
-    <feMergeNode in="SourceGraphic"/>
-  </feMerge>
-
-</filter>
-
-<!-- GRID -->
-<pattern
-  id="grid"
-  width="32"
-  height="32"
-  patternUnits="userSpaceOnUse">
-
-  <path
-    d="M 32 0 L 0 0 0 32"
-    fill="none"
-    stroke="#163437"
-    stroke-width="0.6"
-    opacity="0.35"/>
-
-</pattern>
-```
-
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#02050B" flood-opacity="0.35"/>
+    </filter>
+    <clipPath id="visualClip">
+      <rect x="49" y="124" width="390" height="414" rx="4"/>
+    </clipPath>
   </defs>
 
-  <!-- ====================================================== -->
-
-  <!-- MAIN BACKGROUND                                        -->
-
-  <!-- ====================================================== -->
-
-<rect
- x="0"
- y="0"
- width="1200"
- height="560"
- rx="28"
- fill="url(#background)"/>
-
-<rect
- x="15"
- y="15"
- width="1170"
- height="530"
- rx="24"
- fill="url(#grid)"
- opacity="0.35"/>
-
-  <!-- OUTER FRAME -->
-
-<rect
- x="12"
- y="12"
- width="1176"
- height="536"
- rx="24"
- fill="none"
- stroke="#1C3B3E"
- stroke-width="2"/>
-
-  <!-- ====================================================== -->
-
-  <!-- TERMINAL HEADER                                        -->
-
-  <!-- ====================================================== -->
-
-<rect
- x="12"
- y="12"
- width="1176"
- height="58"
- rx="24"
- fill="#08191C"/>
-
-<line
- x1="12"
- y1="70"
- x2="1188"
- y2="70"
- stroke="#1C3B3E"
- stroke-width="1"/>
-
-  <!-- TERMINAL BUTTONS -->
-
-  <circle cx="40" cy="41" r="7" fill="#E76F51"/>
-  <circle cx="64" cy="41" r="7" fill="#F4A261"/>
-
-<circle
- cx="88"
- cy="41"
- r="7"
- fill="#21D4C5"
- filter="url(#softGlow)"/>
-
-  <!-- TERMINAL TITLE -->
-
-<text
- x="600"
- y="46"
- text-anchor="middle"
- fill="#78909C"
- font-family="monospace"
- font-size="15"
- letter-spacing="1">
-
-```
-farah.sh -- live
-```
-
-  </text>
-
-  <!-- STATUS -->
-
-<text
- x="1135"
- y="46"
- text-anchor="end"
- fill="#21D4C5"
- font-family="monospace"
- font-size="11">
-
-```
-ONLINE
-```
-
-  </text>
-
-  <!-- ====================================================== -->
-
-  <!-- LEFT PANEL                                             -->
-
-  <!-- ====================================================== -->
-
-<rect
- x="35"
- y="95"
- width="430"
- height="390"
- rx="14"
- fill="url(#panel)"
- stroke="#1C3B3E"
- stroke-width="2"/>
-
-  <!-- LEFT HEADER -->
-
-<text
- x="58"
- y="123"
- fill="#21D4C5"
- font-family="monospace"
- font-size="14"
- font-weight="bold"
- letter-spacing="1">
-
-```
-IDENTITY.NODE
-```
-
-  </text>
-
-<text
- x="442"
- y="123"
- text-anchor="end"
- fill="#526E73"
- font-family="monospace"
- font-size="10">
-
-```
-PROFILE / 01
-```
-
-  </text>
-
-<line
- x1="35"
- y1="138"
- x2="465"
- y2="138"
- stroke="#1C3B3E"/>
-
-  <!-- ====================================================== -->
-
-  <!-- PHOTO                                                   -->
-
-  <!-- ====================================================== -->
-
-<circle
- cx="275"
- cy="270"
- r="139"
- fill="none"
- stroke="#21D4C5"
- stroke-width="1"
- stroke-dasharray="5 8"
- opacity="0.45"/>
-
-<circle
- cx="275"
- cy="270"
- r="133"
- fill="none"
- stroke="#21D4C5"
- stroke-width="2"
- opacity="0.25"/>
-
-<circle
- cx="275"
- cy="270"
- r="128"
- fill="#10282B"
- stroke="#21D4C5"
- stroke-width="3"/>
-
-  <!-- YOUR PHOTO -->
-
-<image
- href="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/main/assets/farah-photo.jpeg"
- x="149"
- y="144"
- width="252"
- height="252"
- preserveAspectRatio="xMidYMid slice"
- clip-path="url(#photoClip)"/>
-
-  <!-- PHOTO CORNER MARKERS -->
-
-<path
- d="M145 175 L145 150 L170 150"
- fill="none"
- stroke="#21D4C5"
- stroke-width="2"/>
-
-<path
- d="M380 150 L405 150 L405 175"
- fill="none"
- stroke="#21D4C5"
- stroke-width="2"/>
-
-<path
- d="M145 365 L145 390 L170 390"
- fill="none"
- stroke="#21D4C5"
- stroke-width="2"/>
-
-<path
- d="M380 390 L405 390 L405 365"
- fill="none"
- stroke="#21D4C5"
- stroke-width="2"/>
-
-  <!-- NAME -->
-
-<text
- x="275"
- y="435"
- text-anchor="middle"
- fill="#DCE7E7"
- font-family="monospace"
- font-size="21"
- font-weight="bold"
- letter-spacing="1">
-
-```
-FARAH BEN CHIKHA
-```
-
-  </text>
-
-  <!-- ROLE -->
-
-<text
- x="275"
- y="458"
- text-anchor="middle"
- fill="#21D4C5"
- font-family="monospace"
- font-size="12"
- letter-spacing="2">
-
-```
-CLOUD • DEVOPS • AIOPS
-```
-
-  </text>
-
-  <!-- ====================================================== -->
-
-  <!-- RIGHT PANEL                                            -->
-
-  <!-- ====================================================== -->
-
-<rect
- x="490"
- y="95"
- width="675"
- height="390"
- rx="14"
- fill="url(#panel)"
- stroke="#1C3B3E"
- stroke-width="2"/>
-
-  <!-- RIGHT HEADER -->
-
-<text
- x="515"
- y="123"
- fill="#21D4C5"
- font-family="monospace"
- font-size="14"
- font-weight="bold"
- letter-spacing="1">
-
-```
-SYSTEM.INFO
-```
-
-  </text>
-
-<circle
- cx="1090"
- cy="118"
- r="5"
- fill="#21D4C5"
- filter="url(#softGlow)"/>
-
-<text
- x="1105"
- y="123"
- fill="#21D4C5"
- font-family="monospace"
- font-size="11">
-
-```
-LIVE
-```
-
-  </text>
-
-<line
- x1="490"
- y1="138"
- x2="1165"
- y2="138"
- stroke="#1C3B3E"/>
-
-  <!-- ====================================================== -->
-
-  <!-- SYSTEM INFORMATION                                     -->
-
-  <!-- ====================================================== -->
-
-<text
- x="515"
- y="169"
- fill="#607D82"
- font-family="monospace"
- font-size="12">
-
-```
-Subject
-```
-
-  </text>
-
-<text
- x="1125"
- y="169"
- text-anchor="end"
- fill="#DCE7E7"
- font-family="monospace"
- font-size="12">
-
-```
-Farah Ben Chikha
-```
-
-  </text>
-
-<text
- x="515"
- y="197"
- fill="#607D82"
- font-family="monospace"
- font-size="12">
-
-```
-Role
-```
-
-  </text>
-
-<text
- x="1125"
- y="197"
- text-anchor="end"
- fill="#DCE7E7"
- font-family="monospace"
- font-size="12">
-
-```
-Cloud &amp; DevOps Engineer
-```
-
-  </text>
-
-<text
- x="515"
- y="225"
- fill="#607D82"
- font-family="monospace"
- font-size="12">
-
-```
-Location
-```
-
-  </text>
-
-<text
- x="1125"
- y="225"
- text-anchor="end"
- fill="#DCE7E7"
- font-family="monospace"
- font-size="12">
-
-```
-Tunisia
-```
-
-  </text>
-
-<text
- x="515"
- y="253"
- fill="#607D82"
- font-family="monospace"
- font-size="12">
-
-```
-Education
-```
-
-  </text>
-
-<text
- x="1125"
- y="253"
- text-anchor="end"
- fill="#DCE7E7"
- font-family="monospace"
- font-size="12">
-
-```
-ESPRIT • Cloud Computing
-```
-
-  </text>
-
-  <!-- ====================================================== -->
-
-  <!-- ENGINEERING                                            -->
-
-  <!-- ====================================================== -->
-
-<line
- x1="515"
- y1="274"
- x2="1140"
- y2="274"
- stroke="#1C3B3E"/>
-
-<text
- x="515"
- y="299"
- fill="#F4A261"
- font-family="monospace"
- font-size="11"
- font-weight="bold"
- letter-spacing="1">
-
-```
-CORE.ENGINEERING
-```
-
-  </text>
-
-<text
- x="515"
- y="326"
- fill="#607D82"
- font-family="monospace"
- font-size="11">
-
-```
-Cloud
-```
-
-  </text>
-
-<text
- x="1125"
- y="326"
- text-anchor="end"
- fill="#DCE7E7"
- font-family="monospace"
- font-size="11">
-
-```
-Azure • OpenStack
-```
-
-  </text>
-
-<text
- x="515"
- y="350"
- fill="#607D82"
- font-family="monospace"
- font-size="11">
-
-```
-Infrastructure
-```
-
-  </text>
-
-<text
- x="1125"
- y="350"
- text-anchor="end"
- fill="#DCE7E7"
- font-family="monospace"
- font-size="11">
-
-```
-Kubernetes • Docker
-```
-
-  </text>
-
-<text
- x="515"
- y="374"
- fill="#607D82"
- font-family="monospace"
- font-size="11">
-
-```
-IaC / Automation
-```
-
-  </text>
-
-<text
- x="1125"
- y="374"
- text-anchor="end"
- fill="#DCE7E7"
- font-family="monospace"
- font-size="11">
-
-```
-Terraform • Ansible
-```
-
-  </text>
-
-<text
- x="515"
- y="398"
- fill="#607D82"
- font-family="monospace"
- font-size="11">
-
-```
-Platform / GitOps
-```
-
-  </text>
-
-<text
- x="1125"
- y="398"
- text-anchor="end"
- fill="#DCE7E7"
- font-family="monospace"
- font-size="11">
-
-```
-Argo CD • GitHub • Vault
-```
-
-  </text>
-
-<text
- x="515"
- y="422"
- fill="#607D82"
- font-family="monospace"
- font-size="11">
-
-```
-Intelligent Infra
-```
-
-  </text>
-
-<text
- x="1125"
- y="422"
- text-anchor="end"
- fill="#DCE7E7"
- font-family="monospace"
- font-size="11">
-
-```
-AIOps • K8sGPT • MCP
-```
-
-  </text>
-
-  <!-- ====================================================== -->
-
-  <!-- FOOTER                                                  -->
-
-  <!-- ====================================================== -->
-
-<line
- x1="35"
- y1="505"
- x2="1165"
- y2="505"
- stroke="#1C3B3E"/>
-
-<circle
- cx="53"
- cy="525"
- r="4"
- fill="#21D4C5"
- filter="url(#softGlow)"/>
-
-<text
- x="65"
- y="530"
- fill="#21D4C5"
- font-family="monospace"
- font-size="10"
- letter-spacing="0.5">
-
-```
-ALL SYSTEMS NOMINAL
-```
-
-  </text>
-
-<text
- x="600"
- y="530"
- text-anchor="middle"
- fill="#526E73"
- font-family="monospace"
- font-size="10">
-
-```
-github.com/farahbenchikha
-```
-
-  </text>
-
-<text
- x="1145"
- y="530"
- text-anchor="end"
- fill="#607D82"
- font-family="monospace"
- font-size="10">
-
-```
-TUNISIA NODE • 2026
-```
-
-  </text>
+  <!-- Canvas Background -->
+  <rect width="1180" height="610" rx="16" fill="#0A101F"/>
+
+  <!-- Main Terminal Box -->
+  <rect x="14" y="14" width="1152" height="582" rx="12" fill="#0D1628" stroke="#25344C" filter="url(#shadow)"/>
+  
+  <!-- Header Bar -->
+  <path d="M14 62H1166" stroke="#25344C"/>
+  <circle cx="38" cy="38" r="6" fill="#FF5F57"/>
+  <circle cx="59" cy="38" r="6" fill="#FEBC2E"/>
+  <circle cx="80" cy="38" r="6" fill="#28C840"/>
+  <text x="590" y="43" text-anchor="middle" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600" letter-spacing="0.6">farah.sh --live</text>
+  
+  <rect x="1000" y="27" width="142" height="22" rx="11" fill="#101B30" stroke="#25344C"/>
+  <circle cx="1014" cy="38" r="4" fill="#10B981"/>
+  <text x="1026" y="42" fill="#10B981" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" font-weight="700" letter-spacing="0.5">ONLINE · 100%</text>
+
+  <!-- Left Frame: VISUAL.MAP -->
+  <rect x="35" y="88" width="418" height="480" rx="6" fill="#101B30" stroke="#25344C"/>
+  <path d="M35 124H453" stroke="#25344C"/>
+  <text x="49" y="111" fill="#22D3EE" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="700" letter-spacing="1.2">VISUAL.MAP</text>
+  <text x="438" y="111" text-anchor="end" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11">300×340 / 1-BIT DOT-MATRIX</text>
+
+  <!-- Frame Corners -->
+  <path d="M49 141h14M49 141v14M439 141h-14M439 141v14M49 539h14M49 539v-14M439 539h-14M439 539v-14" fill="none" stroke="#22D3EE" opacity="0.6" stroke-width="1.5"/>
+
+  <!-- Dithered Dot Matrix Portrait -->
+  <g clip-path="url(#visualClip)" shape-rendering="crispEdges">
+      <path d="M286 304h1M272 304h1M227 483h1M334 385h1M168 155h1M312 427h1M325 404h1M309 307h1M259 357h1M288 380h1M249 466h1M364 262h1M140 264h1M216 444h1M350 436h1M238 404h1M130 427h1M308 185h1M269 401h1M221 408h1M138 437h1M168 190h1M171 333h1M205 468h1M284 182h1M264 387h1M340 332h1M222 413h1M75 466h1M305 444h1M200 241h1M136 447h1M259 365h1M232 340h1M172 425h1M166 442h1M237 442h1M356 238h1M268 482h1M170 447h1M342 251h1M228 493h1M357 380h1M176 380h1M167 348h1M299 478h1M77 493h1M149 206h1M283 398h1M344 464h1M355 327h1M158 487h1M158 465h1M219 242h1M336 233h1M336 342h1M296 486h1M107 455h1M176 293h1M195 244h1M156 261h1M189 476h1M232 386h1M360 340h1M141 244h1M354 239h1M269 474h1M155 446h1M343 368h1M363 220h1M160 474h1M165 250h1M136 235h1M289 337h1M222 236h1M153 338h1M320 356h1M175 444h1M166 382h1M209 346h1M258 380h1M208 361h1M149 371h1M263 305h1M286 377h1M332 329h1M172 433h1M279 155h1M296 458h1M140 209h1M229 470h1M100 174h1M197 490h1M85 315h1M144 290h1M366 330h1M215 291h1M103 421h1M332 380h1M320 381h1M243 332h1M252 426h1M181 455h1M264 391h1M113 450h1M90 237h1M143 419h1M188 456h1M176 290h1M175 251h1M360 360h1M253 196h1M271 351h1M196 407h1M164 249h1M328 400h1M104 449h1M275 248h1M267 297h1M186 344h1M137 229h1M228 422h1M304 460h1M310 285h1M151 234h1M211 350h1M95 471h1M332 397h1M301 260h1M280 489h1M173 432h1M134 170h1M243 429h1M185 232h1M241 349h1M259 446h1M317 340h1M211 449h1M200 315h1M159 425h1M173 424h1M207 379h1M316 393h1M294 341h1M193 450h1M172 231h1M194 243h1M183 362h1M208 293h1M333 215h1M304 244h1M279 378h1M312 383h1M347 348h1M138 492h1M349 425h1M102 449h1M246 442h1M74 228h1M282 354h1M203 386h1M174 278h1M200 323h1M130 471h1M351 237h1M336 350h1M294 206h1M307 394h1M114 475h1M264 336h1M338 481h1M142 400h1M188 482h1M86 231h1M184 462h1M226 432h1M115 456h1M221 321h1M288 430h1M324 325h1M200 314h1M201 237h1M162 293h1M207 286h1M175 232h1M103 458h1M249 372h1M145 412h1M348 407h1M165 290h1M337 476h1M184 221h1M144 369h1M156 158h1M143 180h1M307 235h1M286 295h1M225 362h1M333 365h1M187 190h1" fill="none" stroke="#A78BFA" stroke-width="1.1" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate"
+          begin="0s" dur="14.0s" repeatCount="indefinite" calcMode="spline"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+          values="32.9 -18.6; 0 0; 0 0; -8.6 -37.3; 0 0; 0 0" />
+        <animate attributeName="opacity"
+          begin="0s" dur="14.0s" repeatCount="indefinite"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          values="0.2; 0.95; 0.95; 0.85; 0.95; 0.95" />
+      </path>
+      <path d="M367 378h1M222 368h1M250 251h1M219 480h1M190 258h1M183 368h1M326 303h1M324 333h1M194 457h1M357 393h1M208 486h1M356 366h1M327 228h1M193 256h1M329 289h1M341 422h1M358 475h1M162 166h1M303 332h1M120 181h1M250 414h1M270 324h1M128 244h1M367 330h1M201 236h1M312 431h1M339 346h1M305 338h1M217 342h1M215 332h1M334 255h1M271 202h1M304 365h1M315 374h1M111 470h1M145 392h1M317 397h1M96 159h1M313 350h1M230 344h1M167 393h1M167 391h1M163 399h1M358 334h1M273 327h1M368 402h1M152 347h1M209 403h1M187 459h1M157 469h1M197 421h1M192 440h1M233 342h1M208 483h1M224 481h1M224 263h1M87 166h1M337 362h1M195 426h1M197 356h1M245 259h1M303 155h1M123 229h1M250 374h1M308 438h1M348 452h1M302 489h1M250 417h1M156 463h1M171 434h1M284 230h1M333 359h1M363 390h1M293 474h1M193 435h1M130 382h1M333 423h1M144 408h1M93 426h1M315 220h1M367 377h1M319 351h1M134 343h1M333 406h1M103 457h1M256 406h1M198 424h1M211 457h1M223 366h1M288 333h1M156 265h1M140 290h1M164 465h1M265 482h1M230 452h1M334 466h1M155 257h1M163 414h1M249 487h1M195 298h1M300 477h1M145 338h1M301 240h1M179 366h1M202 414h1M209 243h1M195 347h1M140 409h1M121 460h1M335 432h1M92 226h1M199 471h1M278 350h1M290 355h1M335 378h1M314 337h1M264 489h1M160 173h1M94 160h1M282 472h1M252 377h1M366 467h1M232 353h1M338 240h1M290 482h1M165 421h1M320 429h1M279 299h1M214 390h1M336 430h1M351 422h1M335 381h1M216 413h1M198 428h1M287 347h1M160 380h1M362 386h1M248 251h1M359 399h1M324 401h1M307 293h1M163 448h1M120 456h1M122 450h1M275 285h1M226 242h1M302 396h1M119 184h1M354 162h1M126 253h1M261 447h1M192 481h1M243 410h1M360 333h1M199 315h1M286 236h1M230 396h1M328 360h1M183 183h1M141 422h1M167 302h1M238 250h1M173 402h1M369 244h1M318 382h1M234 352h1M98 458h1M129 223h1M120 462h1M344 391h1M267 235h1M285 345h1M187 394h1M80 393h1M121 485h1M142 387h1M372 161h1M141 468h1M100 156h1M213 298h1M322 484h1M235 234h1M338 375h1M202 438h1M176 247h1M179 195h1M276 416h1M103 412h1M212 239h1M151 434h1M213 235h1M234 287h1M200 396h1M210 240h1M235 460h1M90 235h1M191 327h1M234 445h1M290 425h1M211 322h1" fill="none" stroke="#38BDF8" stroke-width="1.1" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate"
+          begin="0s" dur="14.0s" repeatCount="indefinite" calcMode="spline"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+          values="12.0 31.3; 0 0; 0 0; -9.8 -26.7; 0 0; 0 0" />
+        <animate attributeName="opacity"
+          begin="0s" dur="14.0s" repeatCount="indefinite"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          values="0.2; 0.95; 0.95; 0.85; 0.95; 0.95" />
+      </path>
+      <path d="M251 419h1M309 449h1M88 423h1M303 409h1M91 245h1M208 418h1M161 163h1M219 344h1M328 334h1M162 425h1M110 170h1M259 453h1M110 213h1M90 445h1M126 492h1M153 405h1M200 352h1M354 377h1M346 268h1M206 317h1M81 398h1M336 232h1M268 439h1M342 385h1M295 327h1M259 240h1M301 442h1M348 424h1M323 338h1M136 214h1M213 483h1M127 465h1M278 398h1M308 479h1M353 362h1M167 388h1M154 467h1M159 292h1M191 294h1M292 311h1M179 452h1M320 485h1M244 433h1M165 462h1M168 244h1M320 363h1M363 401h1M197 382h1M312 451h1M292 305h1M180 488h1M314 372h1M158 491h1M306 415h1M323 395h1M266 285h1M180 391h1M84 221h1M278 289h1M174 368h1M149 402h1M196 419h1M203 232h1M352 241h1M93 171h1M274 443h1M319 252h1M224 470h1M242 158h1M110 222h1M197 467h1M186 164h1M133 238h1M365 327h1M224 181h1M318 398h1M125 241h1M345 253h1M213 420h1M199 454h1M273 364h1M137 373h1M189 182h1M85 370h1M82 470h1M271 291h1M140 331h1M139 427h1M283 284h1M293 331h1M84 415h1M169 454h1M212 369h1M208 466h1M341 289h1M239 397h1M370 328h1M146 285h1M275 296h1M271 381h1M181 449h1M194 366h1M269 435h1M330 386h1M348 356h1M258 351h1M320 490h1M328 169h1M320 371h1M170 303h1M273 488h1M233 232h1M370 154h1M171 244h1M163 454h1M307 352h1M129 490h1M206 311h1M125 155h1M205 241h1M178 353h1M279 285h1M249 347h1M151 372h1M190 323h1M155 482h1M351 261h1M318 361h1M371 417h1M333 462h1M121 196h1M100 435h1M366 344h1M227 405h1M262 232h1M320 451h1M279 183h1M243 181h1M201 326h1M88 438h1M225 378h1M163 298h1M212 363h1M368 483h1M222 201h1M140 392h1M198 291h1M303 183h1M218 177h1M201 315h1M190 230h1M193 426h1M203 478h1M164 472h1M347 173h1M247 238h1M234 357h1M186 471h1M283 377h1M261 435h1M221 477h1M160 328h1M354 408h1M370 355h1M134 230h1M187 328h1M336 389h1M368 246h1M332 251h1M170 367h1M232 437h1M323 299h1M130 464h1M340 412h1M266 443h1M357 294h1M229 413h1M336 395h1M186 486h1M187 476h1M284 368h1M117 454h1M363 358h1M226 405h1M275 436h1M79 395h1M248 438h1M180 293h1M314 389h1M148 196h1M273 307h1M111 155h1M192 457h1M200 335h1M223 242h1M125 249h1M170 329h1M172 322h1M304 289h1M275 452h1" fill="none" stroke="#38BDF8" stroke-width="1.1" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate"
+          begin="0s" dur="14.0s" repeatCount="indefinite" calcMode="spline"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+          values="-31.6 1.0; 0 0; 0 0; -10.5 -23.5; 0 0; 0 0" />
+        <animate attributeName="opacity"
+          begin="0s" dur="14.0s" repeatCount="indefinite"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          values="0.2; 0.95; 0.95; 0.85; 0.95; 0.95" />
+      </path>
+      <path d="M147 322h1M138 167h1M128 409h1M242 402h1M169 396h1M358 268h1M149 427h1M124 484h1M324 381h1M314 324h1M286 465h1M256 461h1M355 329h1M272 389h1M221 287h1M286 345h1M104 463h1M193 335h1M265 308h1M190 483h1M272 384h1M239 375h1M202 429h1M179 479h1M263 478h1M326 460h1M220 354h1M167 362h1M216 334h1M179 459h1M240 405h1M227 479h1M160 363h1M209 323h1M313 162h1M170 388h1M136 259h1M216 336h1M273 202h1M288 216h1M177 340h1M201 230h1M211 237h1M281 334h1M356 373h1M360 274h1M180 467h1M292 373h1M197 347h1M294 195h1M204 397h1M280 425h1M331 418h1M144 453h1M175 487h1M219 252h1M95 393h1M149 234h1M371 237h1M142 383h1M200 351h1M81 435h1M242 318h1M179 406h1M255 487h1M348 382h1M202 442h1M283 355h1M166 422h1M193 362h1M161 334h1M338 413h1M227 218h1M298 414h1M323 252h1M271 455h1M332 460h1M352 386h1M278 303h1M181 233h1M263 348h1M152 362h1M194 396h1M267 420h1M151 322h1M246 464h1M285 452h1M126 436h1M311 335h1M306 380h1M260 452h1M168 353h1M234 288h1M314 294h1M152 413h1M327 400h1M108 463h1M267 493h1M306 349h1M192 431h1M101 170h1M198 382h1M205 414h1M162 298h1M243 378h1M169 477h1M168 156h1M305 360h1M356 453h1M145 287h1M147 403h1M150 230h1M216 287h1M336 465h1M247 182h1M287 344h1M127 441h1M304 347h1M349 426h1M83 427h1M265 455h1M109 158h1M311 434h1M146 410h1M231 421h1M140 432h1M104 414h1M189 471h1M160 232h1M181 341h1M226 182h1M287 477h1M178 342h1M227 188h1M253 174h1M300 288h1M98 446h1M371 360h1M291 469h1M313 299h1M214 441h1M321 384h1M289 388h1M296 280h1M238 218h1M317 408h1M246 439h1M75 210h1M213 352h1M159 290h1M187 483h1M160 330h1M197 366h1M266 491h1M108 485h1M203 458h1M235 372h1M276 490h1M315 435h1M133 377h1M233 177h1M200 321h1M131 235h1M182 156h1M239 335h1M181 406h1M210 429h1M264 490h1M331 425h1M341 445h1M79 311h1M156 242h1M365 484h1M284 231h1M271 481h1M328 353h1M291 409h1M300 479h1M163 388h1M330 408h1M343 359h1M158 443h1M260 425h1M326 376h1M169 233h1M114 210h1M159 456h1M205 365h1M98 437h1M282 403h1M153 480h1M208 309h1M166 423h1M323 378h1M152 465h1M121 409h1M126 432h1M113 485h1M245 369h1M267 459h1" fill="none" stroke="#A78BFA" stroke-width="1.1" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate"
+          begin="0s" dur="14.0s" repeatCount="indefinite" calcMode="spline"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+          values="-3.6 -37.8; 0 0; 0 0; 4.3 -40.6; 0 0; 0 0" />
+        <animate attributeName="opacity"
+          begin="0s" dur="14.0s" repeatCount="indefinite"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          values="0.2; 0.95; 0.95; 0.85; 0.95; 0.95" />
+      </path>
+      <path d="M114 403h1M308 441h1M211 484h1M309 421h1M317 405h1M230 381h1M284 419h1M359 246h1M208 305h1M265 353h1M306 157h1M276 391h1M255 398h1M205 239h1M242 325h1M318 354h1M176 362h1M186 417h1M287 470h1M264 400h1M125 167h1M301 296h1M215 254h1M341 327h1M279 333h1M180 158h1M207 249h1M227 347h1M168 405h1M343 404h1M222 468h1M153 488h1M195 349h1M186 165h1M158 231h1M213 379h1M187 489h1M120 452h1M348 374h1M137 395h1M151 334h1M263 345h1M262 452h1M229 234h1M119 396h1M334 324h1M298 466h1M266 357h1M222 376h1M302 341h1M114 453h1M118 417h1M205 490h1M335 382h1M345 370h1M304 331h1M196 451h1M94 472h1M266 333h1M200 460h1M344 384h1M188 428h1M352 340h1M187 424h1M140 193h1M354 401h1M271 432h1M152 440h1M203 413h1M228 351h1M364 408h1M175 389h1M291 406h1M263 453h1M163 451h1M242 450h1M153 291h1M274 301h1M115 218h1M314 160h1M279 373h1M92 424h1M99 396h1M324 487h1M338 372h1M351 255h1M219 315h1M92 255h1M146 287h1M281 405h1M151 180h1M252 475h1M214 466h1M183 291h1M305 250h1M186 325h1M226 241h1M130 469h1M288 367h1M195 370h1M235 358h1M334 177h1M109 431h1M227 449h1M167 215h1M174 331h1M337 347h1M159 451h1M219 362h1M156 376h1M170 239h1M213 409h1M308 486h1M78 442h1M194 450h1M363 258h1M189 389h1M250 479h1M251 486h1M235 469h1M289 449h1M208 354h1M284 245h1M289 421h1M88 245h1M203 492h1M261 381h1M207 431h1M295 264h1M246 414h1M225 159h1M228 332h1M236 407h1M307 470h1M290 346h1M270 430h1M225 420h1M347 239h1M93 417h1M332 434h1M313 492h1M156 356h1M164 435h1M332 362h1M112 488h1M288 212h1M305 479h1M343 375h1M292 340h1M256 377h1M211 234h1M164 413h1M195 399h1M286 289h1M169 242h1M188 421h1M267 342h1M318 353h1M235 454h1M287 420h1M322 447h1M217 359h1M119 161h1M287 465h1M215 428h1M251 202h1M206 327h1M322 425h1M85 248h1M227 372h1M281 332h1M310 391h1M214 307h1M148 213h1M246 189h1M282 446h1M168 451h1M282 457h1M117 208h1M153 190h1M289 233h1M134 178h1M153 374h1M311 345h1M165 450h1M199 380h1M271 327h1M173 292h1M315 441h1M304 301h1M257 380h1M220 426h1M136 493h1M158 453h1M80 470h1M149 236h1M134 462h1M152 390h1M154 427h1M290 443h1" fill="none" stroke="#38BDF8" stroke-width="1.1" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate"
+          begin="0s" dur="14.0s" repeatCount="indefinite" calcMode="spline"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+          values="-11.1 9.6; 0 0; 0 0; -5.7 -37.6; 0 0; 0 0" />
+        <animate attributeName="opacity"
+          begin="0s" dur="14.0s" repeatCount="indefinite"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          values="0.2; 0.95; 0.95; 0.85; 0.95; 0.95" />
+      </path>
+      <path d="M309 378h1M309 480h1M286 339h1M136 382h1M298 404h1M329 382h1M154 358h1M175 257h1M311 387h1M346 334h1M117 439h1M202 292h1M165 328h1M336 402h1M87 410h1M259 396h1M113 409h1M181 387h1M92 420h1M122 397h1M365 391h1M154 337h1M187 393h1M307 227h1M265 284h1M356 240h1M176 369h1M362 369h1M312 354h1M169 323h1M125 174h1M86 470h1M213 328h1M310 399h1M337 396h1M106 478h1M170 274h1M106 451h1M190 352h1M174 242h1M146 353h1M136 483h1M244 406h1M194 350h1M316 401h1M286 438h1M185 357h1M252 402h1M148 325h1M236 226h1M338 305h1M342 477h1M267 237h1M262 483h1M197 234h1M229 236h1M192 369h1M249 468h1M162 351h1M369 417h1M322 377h1M170 366h1M104 241h1M231 243h1M165 476h1M199 361h1M226 409h1M277 296h1M305 419h1M358 384h1M298 394h1M328 354h1M183 324h1M345 385h1M249 477h1M187 293h1M149 240h1M208 362h1M232 393h1M323 491h1M364 406h1M249 295h1M232 438h1M209 386h1M231 365h1M328 397h1M164 485h1M354 343h1M356 251h1M183 435h1M126 225h1M260 342h1M146 248h1M159 353h1M320 421h1M206 491h1M93 462h1M277 279h1M278 178h1M160 156h1M81 403h1M127 206h1M186 188h1M168 378h1M90 402h1M205 430h1M197 485h1M219 381h1M354 421h1M85 230h1M309 302h1M320 161h1M247 255h1M124 186h1M124 427h1M182 445h1M337 242h1M147 363h1M344 453h1M316 219h1M326 405h1M330 387h1M232 429h1M295 385h1M373 376h1M210 419h1M260 235h1M194 233h1M150 260h1M352 364h1M122 177h1M234 362h1M352 450h1M314 446h1M262 419h1M306 452h1M372 435h1M276 234h1M297 472h1M337 482h1M255 442h1M356 413h1M161 192h1M150 292h1M253 453h1M225 312h1M288 289h1M296 491h1M289 442h1M235 485h1M368 400h1M363 446h1M275 184h1M137 243h1M373 156h1M78 157h1M154 174h1M92 468h1M124 492h1M234 313h1M182 468h1M112 161h1M180 258h1M197 444h1M147 437h1M314 454h1M321 239h1M201 364h1M276 290h1M224 292h1M346 169h1M131 457h1M181 465h1M181 416h1M100 224h1M261 404h1M366 409h1M148 238h1M174 413h1M305 166h1M324 489h1M180 413h1M288 231h1M170 179h1M328 450h1M225 437h1M306 309h1M107 417h1M159 461h1M122 180h1M221 489h1M373 347h1M285 232h1M168 387h1M175 438h1M159 428h1M156 470h1M345 379h1M271 324h1M75 160h1" fill="none" stroke="#38BDF8" stroke-width="1.1" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate"
+          begin="0s" dur="14.0s" repeatCount="indefinite" calcMode="spline"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+          values="16.3 16.9; 0 0; 0 0; -5.3 -25.2; 0 0; 0 0" />
+        <animate attributeName="opacity"
+          begin="0s" dur="14.0s" repeatCount="indefinite"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          values="0.2; 0.95; 0.95; 0.85; 0.95; 0.95" />
+      </path>
+      <path d="M254 361h1M182 328h1M290 365h1M133 483h1M209 321h1M254 358h1M192 448h1M324 424h1M282 364h1M111 228h1M101 160h1M157 387h1M218 417h1M95 172h1M173 397h1M282 370h1M75 235h1M130 235h1M221 407h1M108 461h1M147 454h1M165 303h1M179 234h1M257 356h1M187 479h1M156 453h1M348 423h1M200 156h1M187 487h1M223 410h1M176 344h1M110 239h1M369 370h1M263 402h1M156 438h1M158 340h1M74 476h1M354 478h1M220 389h1M200 249h1M213 426h1M167 236h1M156 346h1M156 428h1M218 360h1M354 389h1M88 476h1M75 220h1M94 241h1M301 481h1M254 243h1M283 327h1M147 328h1M155 384h1M97 341h1M280 441h1M369 302h1M86 407h1M93 434h1M271 446h1M360 465h1M208 428h1M143 333h1M280 426h1M284 414h1M176 265h1M362 436h1M167 471h1M201 355h1M189 426h1M348 411h1M200 373h1M129 221h1M297 424h1M97 234h1M271 439h1M267 234h1M125 453h1M308 474h1M359 238h1M361 399h1M294 288h1M203 374h1M281 380h1M282 442h1M87 471h1M228 434h1M148 426h1M330 381h1M186 416h1M305 367h1M189 370h1M89 394h1M87 158h1M202 392h1M269 236h1M325 247h1M258 246h1M226 403h1M217 381h1M159 492h1M272 183h1M362 397h1M368 424h1M250 295h1M85 224h1M222 478h1M80 475h1M340 441h1M327 489h1M98 439h1M257 362h1M315 398h1M196 352h1M162 443h1M142 247h1M221 481h1M293 481h1M236 238h1M192 425h1M167 476h1M145 382h1M313 218h1M356 395h1M324 425h1M282 404h1M91 228h1M251 407h1M145 403h1M105 480h1M178 237h1M354 470h1M129 457h1M112 492h1M224 419h1M276 399h1M132 261h1M324 173h1M358 427h1M329 249h1M202 314h1M134 209h1M352 406h1M175 435h1M241 384h1M305 389h1M140 444h1M371 260h1M364 410h1M306 373h1M156 454h1M80 482h1M173 385h1M246 366h1M328 331h1M178 436h1M292 371h1M233 455h1M207 470h1M332 414h1M197 479h1M235 441h1M176 323h1M299 288h1M316 417h1M103 252h1M201 345h1M270 359h1M285 331h1M221 428h1M318 341h1M308 377h1M145 342h1M212 334h1M289 287h1M137 401h1M156 355h1M346 245h1M360 370h1M259 359h1M131 239h1M159 198h1M287 301h1M210 294h1M191 408h1M352 417h1M332 346h1M265 439h1M172 367h1M342 450h1M216 456h1M261 483h1M146 380h1M278 330h1M237 385h1M154 449h1M354 237h1M107 429h1M219 438h1M302 403h1" fill="none" stroke="#A78BFA" stroke-width="1.1" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate"
+          begin="0s" dur="14.0s" repeatCount="indefinite" calcMode="spline"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+          values="29.8 2.1; 0 0; 0 0; -4.4 -42.0; 0 0; 0 0" />
+        <animate attributeName="opacity"
+          begin="0s" dur="14.0s" repeatCount="indefinite"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          values="0.2; 0.95; 0.95; 0.85; 0.95; 0.95" />
+      </path>
+      <path d="M366 408h1M103 406h1M253 438h1M326 395h1M296 443h1M105 330h1M237 486h1M287 290h1M228 467h1M229 443h1M171 453h1M292 451h1M299 229h1M270 418h1M243 473h1M333 351h1M133 185h1M96 232h1M369 450h1M89 227h1M215 230h1M225 465h1M236 382h1M349 473h1M333 343h1M279 157h1M129 183h1M291 309h1M104 355h1M271 479h1M107 394h1M101 409h1M193 294h1M187 286h1M217 289h1M232 464h1M271 251h1M353 374h1M306 179h1M294 385h1M137 455h1M296 441h1M178 461h1M228 428h1M320 377h1M300 487h1M212 329h1M332 449h1M188 349h1M158 444h1M86 417h1M280 380h1M261 398h1M256 358h1M157 187h1M233 450h1M150 249h1M132 257h1M142 190h1M298 422h1M111 165h1M299 386h1M326 233h1M256 365h1M295 242h1M258 395h1M210 311h1M168 243h1M114 246h1M148 400h1M147 472h1M263 470h1M137 240h1M152 473h1M183 327h1M283 329h1M149 449h1M368 255h1M320 240h1M320 339h1M181 399h1M262 370h1M90 203h1M85 463h1M243 231h1M167 482h1M196 447h1M361 452h1M346 430h1M155 490h1M264 289h1M306 302h1M299 293h1M225 384h1M179 365h1M182 305h1M287 459h1M122 483h1M158 411h1M240 233h1M295 357h1M262 474h1M166 344h1M249 234h1M185 354h1M243 316h1M165 401h1M268 432h1M320 459h1M222 476h1M348 401h1M262 435h1M221 384h1M272 333h1M348 287h1M246 367h1M94 443h1M311 294h1M205 450h1M77 315h1M246 232h1M318 413h1M363 162h1M226 454h1M176 440h1M279 407h1M275 368h1M233 359h1M288 444h1M182 429h1M237 476h1M304 251h1M326 399h1M172 246h1M122 484h1M209 157h1M373 355h1M281 431h1M202 239h1M74 426h1M311 231h1M134 453h1M272 407h1M187 241h1M329 390h1M93 400h1M193 167h1M301 376h1M154 474h1M308 482h1M219 313h1M154 382h1M300 481h1M208 328h1M298 413h1M132 379h1M148 374h1M226 237h1M344 324h1M287 485h1M240 350h1M233 216h1M144 475h1M269 393h1M250 235h1M142 360h1M147 237h1M297 449h1M251 429h1M349 218h1M208 424h1M263 167h1M325 444h1M156 459h1M363 259h1M260 355h1M279 396h1M130 436h1M83 420h1M157 475h1M266 378h1M243 323h1M127 235h1M81 485h1M314 416h1M74 163h1M206 237h1M270 308h1M144 287h1M157 249h1M337 160h1M104 477h1M163 240h1M151 360h1M186 377h1M337 376h1M256 485h1M185 330h1M304 438h1M241 491h1" fill="none" stroke="#38BDF8" stroke-width="1.1" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate"
+          begin="0s" dur="14.0s" repeatCount="indefinite" calcMode="spline"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+          values="-31.8 6.4; 0 0; 0 0; -5.4 -35.1; 0 0; 0 0" />
+        <animate attributeName="opacity"
+          begin="0s" dur="14.0s" repeatCount="indefinite"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          values="0.2; 0.95; 0.95; 0.85; 0.95; 0.95" />
+      </path>
+      <path d="M240 327h1M221 309h1M172 258h1M229 180h1M304 461h1M219 425h1M304 400h1M232 342h1M111 251h1M218 431h1M304 242h1M330 465h1M143 451h1M101 204h1M195 235h1M360 171h1M199 291h1M151 480h1M290 477h1M360 156h1M211 300h1M359 345h1M230 431h1M164 429h1M86 228h1M257 464h1M187 344h1M343 353h1M277 413h1M162 334h1M269 437h1M332 165h1M165 329h1M227 369h1M315 381h1M74 234h1M184 466h1M297 284h1M278 465h1M261 454h1M96 432h1M169 225h1M356 465h1M168 242h1M198 490h1M162 485h1M265 360h1M244 324h1M268 180h1M215 385h1M74 246h1M267 251h1M282 477h1M153 490h1M158 297h1M138 469h1M347 380h1M238 405h1M200 319h1M111 408h1M257 481h1M146 262h1M258 329h1M365 483h1M143 446h1M156 367h1M97 451h1M242 327h1M279 343h1M363 388h1M126 391h1M297 239h1M210 493h1M311 289h1M219 287h1M278 486h1M343 471h1M103 404h1M189 232h1M236 330h1M113 437h1M202 478h1M156 427h1M86 428h1M188 413h1M275 292h1M310 309h1M273 234h1M368 415h1M301 414h1M234 232h1M172 329h1M351 390h1M215 325h1M220 239h1M367 387h1M143 467h1M99 159h1M192 450h1M293 341h1M189 165h1M217 312h1M309 361h1M319 455h1M218 382h1M284 388h1M188 333h1M74 482h1M270 302h1M146 446h1M274 370h1M343 387h1M348 394h1M365 244h1M184 478h1M216 362h1M369 374h1M330 415h1M360 373h1M305 306h1M113 218h1M122 202h1M226 440h1M373 368h1M343 372h1M163 356h1M135 483h1M180 242h1M127 166h1M175 323h1M146 399h1M308 403h1M197 337h1M355 363h1M87 397h1M146 490h1M236 475h1M349 324h1M107 248h1M104 443h1M244 398h1M309 249h1M173 231h1M149 417h1M245 240h1M312 413h1M328 332h1M221 254h1M344 375h1M184 251h1M242 178h1M244 441h1M272 355h1M260 434h1M138 219h1M118 407h1M222 411h1M113 228h1M320 397h1M233 239h1M326 406h1M185 327h1M370 359h1M200 414h1M317 425h1M283 375h1M360 434h1M100 164h1M105 458h1M160 368h1M186 250h1M196 389h1M299 396h1M254 446h1M271 326h1M186 426h1M157 262h1M262 422h1M198 366h1M234 236h1M75 469h1M151 364h1M95 229h1M342 215h1M365 304h1M312 429h1M289 364h1M154 442h1M194 425h1M153 300h1M310 439h1M193 301h1M319 485h1M201 436h1M189 302h1M297 366h1M303 421h1M198 376h1M208 470h1M271 342h1" fill="none" stroke="#38BDF8" stroke-width="1.1" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate"
+          begin="0s" dur="14.0s" repeatCount="indefinite" calcMode="spline"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+          values="25.1 -23.1; 0 0; 0 0; -11.0 -36.9; 0 0; 0 0" />
+        <animate attributeName="opacity"
+          begin="0s" dur="14.0s" repeatCount="indefinite"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          values="0.2; 0.95; 0.95; 0.85; 0.95; 0.95" />
+      </path>
+      <path d="M155 484h1M202 335h1M234 234h1M197 336h1M131 222h1M285 483h1M208 341h1M337 402h1M249 407h1M249 418h1M216 325h1M334 290h1M275 346h1M278 246h1M344 363h1M244 376h1M127 421h1M346 376h1M270 242h1M333 478h1M331 377h1M269 468h1M127 245h1M227 425h1M347 367h1M162 421h1M261 426h1M166 438h1M310 224h1M110 232h1M121 166h1M163 334h1M365 246h1M326 330h1M103 448h1M200 356h1M197 353h1M142 354h1M314 414h1M176 492h1M156 441h1M343 378h1M79 392h1M156 236h1M179 414h1M327 360h1M150 323h1M282 473h1M273 310h1M142 458h1M129 195h1M321 449h1M356 288h1M300 173h1M212 457h1M219 491h1M350 353h1M286 307h1M170 276h1M144 489h1M256 361h1M301 337h1M137 171h1M110 402h1M169 326h1M297 443h1M267 392h1M173 225h1M174 391h1M349 393h1M258 408h1M354 395h1M330 436h1M91 216h1M345 393h1M125 458h1M217 370h1M318 412h1M296 415h1M207 362h1M324 233h1M270 293h1M227 493h1M172 175h1M284 394h1M166 379h1M202 367h1M328 391h1M256 440h1M213 308h1M152 423h1M256 370h1M89 415h1M241 440h1M118 442h1M192 444h1M329 157h1M157 446h1M324 260h1M251 452h1M226 239h1M103 409h1M250 418h1M195 291h1M236 317h1M210 468h1M259 348h1M282 454h1M159 446h1M186 361h1M232 452h1M270 437h1M279 328h1M153 229h1M159 422h1M294 407h1M263 452h1M95 245h1M314 361h1M293 479h1M112 416h1M334 393h1M248 286h1M189 333h1M295 371h1M203 419h1M130 237h1M223 368h1M184 255h1M159 444h1M162 370h1M231 213h1M367 343h1M164 470h1M158 332h1M299 354h1M122 486h1M352 342h1M132 432h1M295 475h1M309 418h1M304 431h1M161 243h1M301 389h1M157 180h1M208 377h1M228 369h1M174 342h1M90 258h1M358 435h1M179 440h1M313 417h1M224 467h1M158 364h1M327 486h1M84 205h1M317 339h1M202 422h1M231 435h1M222 246h1M148 408h1M214 308h1M260 451h1M189 459h1M229 201h1M190 466h1M316 391h1M78 227h1M296 286h1M216 365h1M263 363h1M253 389h1M235 450h1M261 352h1M298 410h1M138 441h1M361 476h1M295 252h1M169 344h1M146 378h1M217 365h1M244 454h1M298 236h1M193 381h1M156 442h1M104 426h1M189 436h1M156 430h1M125 488h1M265 384h1M108 228h1M149 262h1M323 421h1M338 220h1M257 459h1M324 360h1M221 362h1M141 413h1M209 439h1M141 224h1" fill="none" stroke="#A78BFA" stroke-width="1.1" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate"
+          begin="0s" dur="14.0s" repeatCount="indefinite" calcMode="spline"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+          values="-33.2 -16.6; 0 0; 0 0; -0.7 -41.0; 0 0; 0 0" />
+        <animate attributeName="opacity"
+          begin="0s" dur="14.0s" repeatCount="indefinite"
+          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
+          values="0.2; 0.95; 0.95; 0.85; 0.95; 0.95" />
+      </path>
+  </g>
+
+  <!-- Right Frame: SYSTEM.PROFILE -->
+  <rect x="468" y="88" width="676" height="480" rx="6" fill="#101B30" stroke="#25344C"/>
+  <path d="M468 124H1144" stroke="#25344C"/>
+  <text x="485" y="111" fill="#10B981" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="700" letter-spacing="1.2">SYSTEM.PROFILE</text>
+  <text x="1127" y="111" text-anchor="end" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11">LIVE TELEMETRY</text>
+
+  <!-- Telemetry Content Rows -->
+    <g transform="translate(485, 148)">
+      <text x="0" y="0" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">SUBJECT</text>
+      <text x="145" y="0" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="700">FARAH BEN CHIKHA</text>
+      <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <g transform="translate(485, 182)">
+      <text x="0" y="0" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">ROLE</text>
+      <text x="145" y="0" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500">Cloud & DevOps Engineer</text>
+      <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <g transform="translate(485, 216)">
+      <text x="0" y="0" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">SPECIALTIES</text>
+      <text x="145" y="0" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500">Kubernetes · DevSecOps · GitOps · AIOps</text>
+      <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <g transform="translate(485, 250)">
+      <text x="0" y="0" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">EDUCATION</text>
+      <text x="145" y="0" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500">ESPRIT 🎓 · Univ of Tokyo (GCI) 🇯🇵</text>
+      <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <g transform="translate(485, 284)">
+      <text x="0" y="0" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">STATUS</text>
+      <text x="145" y="0" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500">Seeking 6-Month PFE Internship (Jan 2027)</text>
+      <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <g transform="translate(485, 318)">
+      <text x="0" y="0" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">LOCATIONS</text>
+      <text x="145" y="0" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500">France · Europe · Remote / Hybrid</text>
+      <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <g transform="translate(485, 352)">
+      <text x="0" y="0" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">CLOUD.INFRA</text>
+      <text x="145" y="0" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500">Azure · OpenStack · VMware · Kubernetes HA</text>
+      <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <g transform="translate(485, 386)">
+      <text x="0" y="0" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">IAC.DEVOPS</text>
+      <text x="145" y="0" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500">Terraform · Ansible · Argo CD · Docker</text>
+      <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <g transform="translate(485, 420)">
+      <text x="0" y="0" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">SEC.OBS</text>
+      <text x="145" y="0" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500">HashiCorp Vault · ELK · Prometheus · Grafana</text>
+      <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <g transform="translate(485, 454)">
+      <text x="0" y="0" fill="#8291A8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">AIOPS.TOOLS</text>
+      <text x="145" y="0" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="500">K8sGPT · KubeWatch · Gemini AI · MCP</text>
+      <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <g transform="translate(485, 488)">
+      <text x="0" y="0" fill="#22D3EE" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">GRID.LINKEDIN</text>
+      <text x="145" y="0" fill="#38BDF8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="700">linkedin.com/in/farahbenchikha</text>
+      <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    <g transform="translate(485, 522)">
+      <text x="0" y="0" fill="#22D3EE" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="600">GRID.GITHUB</text>
+      <text x="145" y="0" fill="#38BDF8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12.5" font-weight="700">github.com/farahbenchikha</text>
+      <line x1="0" y1="10" x2="640" y2="10" stroke="#25344C" stroke-width="0.5" opacity="0.4"/>
+    </g>
 
 </svg>
