@@ -109,7 +109,6 @@ def extract_portrait_points(theme_name: str, seed: int = 42) -> np.ndarray:
         gray = ImageEnhance.Contrast(gray).enhance(1.45)
         gray = gray.filter(ImageFilter.UnsharpMask(radius=2, percent=180, threshold=1))
         bits = floyd_steinberg(np.asarray(gray))
-        # Lit pixels in dark mode
         active = ~bits
     else:
         gray = ImageOps.autocontrast(gray, cutoff=1)
@@ -125,7 +124,7 @@ def extract_portrait_points(theme_name: str, seed: int = 42) -> np.ndarray:
     # Place inside VISUAL.MAP box (top-left offset x=74, y=154)
     points = np.column_stack((74 + xs, 154 + ys)).astype(np.float32)
     
-    # Downsample points for optimal SVG size (~1800-2200 points)
+    # Downsample points for optimal SVG size (~1800-2000 points)
     target_count = 2000
     if len(points) > target_count:
         indices = rng.choice(len(points), size=target_count, replace=False)
@@ -140,24 +139,19 @@ def generate_k8s_wheel_points(count: int, seed: int = 42) -> np.ndarray:
     cx, cy = 224, 324
     pts = []
     
-    # Outer circle & spokes
     for i in range(count):
         r_type = rng.random()
         if r_type < 0.4:
-            # Outer ring
             radius = 110 + rng.uniform(-3, 3)
             angle = rng.uniform(0, 2 * math.pi)
         elif r_type < 0.7:
-            # 7 spokes of K8s wheel
             spoke = rng.integers(0, 7)
             angle = spoke * (2 * math.pi / 7) + rng.uniform(-0.05, 0.05)
             radius = rng.uniform(30, 110)
         elif r_type < 0.9:
-            # Inner ring
             radius = 35 + rng.uniform(-2, 2)
             angle = rng.uniform(0, 2 * math.pi)
         else:
-            # Center hub
             radius = rng.uniform(0, 25)
             angle = rng.uniform(0, 2 * math.pi)
             
@@ -172,14 +166,10 @@ def generate_svg(theme_name: str) -> str:
     theme = THEMES[theme_name]
     rng = np.random.default_rng(314159)
     
-    # Extract portrait points
     portrait_pts = extract_portrait_points(theme_name)
     N = len(portrait_pts)
-    
-    # K8s wheel morph points
     k8s_pts = generate_k8s_wheel_points(N)
     
-    # Group points into paths for animation (e.g. 10 groups)
     num_groups = 10
     group_size = N // num_groups
     
@@ -192,34 +182,23 @@ def generate_svg(theme_name: str) -> str:
         g_port = portrait_pts[idx_start:idx_end]
         g_k8s = k8s_pts[idx_start:idx_end]
         
-        # Build path data 'M x y h 1'
         d_cmds = []
         for pt in g_port:
             x, y = int(round(pt[0])), int(round(pt[1]))
             d_cmds.append(f"M{x} {y}h1")
         path_d = "".join(d_cmds)
         
-        # Calculate group displacement vectors for animation keyframes
-        # Keyframes:
-        # 0s - 1.5s: Fly in from scattered random grid (Construction)
-        # 1.5s - 7.0s: Form Farah's portrait crisp (Hold)
-        # 7.0s - 10.5s: Morph to K8s wheel constellation
-        # 10.5s - 14.0s: Return to Farah's portrait
+        scatter_dx = float(rng.uniform(-35, 35))
+        scatter_dy = float(rng.uniform(-40, 40))
         
-        # Random initial scatter offset
-        scatter_dx = float(rng.uniform(-40, 40))
-        scatter_dy = float(rng.uniform(-50, 50))
-        
-        # Morph offset to K8s wheel
         mean_port = np.mean(g_port, axis=0)
         mean_k8s = np.mean(g_k8s, axis=0)
         morph_dx = float(mean_k8s[0] - mean_port[0])
         morph_dy = float(mean_k8s[1] - mean_port[1])
         
-        # Color accent per group
         stroke_color = theme["portrait"] if g % 3 != 0 else theme["portrait_secondary"]
         
-        path_html = f'''      <path d="{path_d}" fill="none" stroke="{stroke_color}" stroke-width="1.1" opacity="0.92">
+        path_html = f'''      <path d="{path_d}" fill="none" stroke="{stroke_color}" stroke-width="1" opacity="0.92">
         <animateTransform attributeName="transform" type="translate"
           begin="0s" dur="{LOOP_SECONDS}s" repeatCount="indefinite" calcMode="spline"
           keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
@@ -234,7 +213,6 @@ def generate_svg(theme_name: str) -> str:
 
     paths_combined = "\n".join(path_groups_html)
 
-    # Generate telemetry rows
     row_elements = []
     start_y = 148
     row_height = 34
@@ -254,14 +232,8 @@ def generate_svg(theme_name: str) -> str:
 
     rows_svg = "\n".join(row_elements)
 
-    svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="title desc">
-  <title id="title">Farah Ben Chikha — Terminal Profile</title>
-  <desc id="desc">Live animated dithered dot-matrix portrait and telemetry system profile for Farah Ben Chikha, Cloud &amp; DevOps Engineer.</desc>
-
+    svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <defs>
-    <filter id="shadow" x="-10%" y="-10%" width="130%" height="135%">
-      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="{theme['shadow']}" flood-opacity="0.35"/>
-    </filter>
     <clipPath id="visualClip">
       <rect x="49" y="124" width="390" height="414" rx="4"/>
     </clipPath>
@@ -271,7 +243,7 @@ def generate_svg(theme_name: str) -> str:
   <rect width="{W}" height="{H}" rx="16" fill="{theme['bg']}"/>
 
   <!-- Main Terminal Box -->
-  <rect x="14" y="14" width="1152" height="582" rx="12" fill="{theme['panel']}" stroke="{theme['line']}" filter="url(#shadow)"/>
+  <rect x="14" y="14" width="1152" height="582" rx="12" fill="{theme['panel']}" stroke="{theme['line']}"/>
   
   <!-- Header Bar -->
   <path d="M14 62H1166" stroke="{theme['line']}"/>
