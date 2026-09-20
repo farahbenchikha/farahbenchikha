@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate animated SVG GitHub profile banners for Farah Ben Chikha.
-Includes dithered dot-matrix portrait with particle construction & morphing animation.
+High-density dithered dot-matrix portrait with crisp subject extraction & fast particle animation.
 
 Run from repository root:
     python scripts/banner/generate.py
@@ -19,7 +19,7 @@ ASSETS = ROOT / "assets"
 SOURCE = ASSETS / "farah-photo.jpeg"
 
 W, H = 1180, 610
-LOOP_SECONDS = 14.0
+LOOP_SECONDS = 8.0  # Fast, snappy 8-second loop
 
 THEMES = {
     "dark": {
@@ -29,12 +29,11 @@ THEMES = {
         "line": "#25344C",
         "muted": "#8291A8",
         "text": "#DDE7F5",
-        "portrait": "#38BDF8",  # Cyber cyan / blue
-        "portrait_secondary": "#A78BFA",  # Purple accent
+        "portrait": "#38BDF8",        # Bright cyber cyan
+        "portrait_secondary": "#818CF8",  # Indigo accent
         "chrome": "#22D3EE",
         "accent": "#10B981",
         "shadow": "#02050B",
-        "highlight": "#F43F5E",
     },
     "light": {
         "bg": "#F6F8FA",
@@ -44,11 +43,10 @@ THEMES = {
         "muted": "#64748B",
         "text": "#172033",
         "portrait": "#0284C7",
-        "portrait_secondary": "#7C3AED",
+        "portrait_secondary": "#6366F1",
         "chrome": "#0891B2",
         "accent": "#059669",
         "shadow": "#AAB7C4",
-        "highlight": "#E11D48",
     },
 }
 
@@ -79,7 +77,7 @@ def floyd_steinberg(gray: np.ndarray) -> np.ndarray:
         direction = 1 if left_to_right else -1
         for x in xs:
             old = work[y, x]
-            new = 1.0 if old >= 0.5 else 0.0
+            new = 1.0 if old >= 0.48 else 0.0
             out[y, x] = bool(new)
             err = old - new
             nx = x + direction
@@ -95,69 +93,48 @@ def floyd_steinberg(gray: np.ndarray) -> np.ndarray:
 
 
 def extract_portrait_points(theme_name: str, seed: int = 42) -> np.ndarray:
-    """Extract sampled dither points from farah-photo.jpeg."""
+    """Extract high-density, sharp dither points focused on Farah's face & upper body."""
     rng = np.random.default_rng(seed)
     source = Image.open(SOURCE).convert("RGB")
     w, h = source.size
     
-    crop = source.crop((int(w * 0.08), int(h * 0.02), int(w * 0.92), int(h * 0.88)))
+    # Tight crop around Farah's face & upper body
+    crop = source.crop((int(w * 0.15), int(h * 0.08), int(w * 0.85), int(h * 0.78)))
     crop = crop.resize((300, 340), Image.Resampling.LANCZOS)
     
     gray = ImageOps.grayscale(crop)
-    if theme_name == "dark":
-        gray = ImageOps.equalize(gray)
-        gray = ImageEnhance.Contrast(gray).enhance(1.45)
-        gray = gray.filter(ImageFilter.UnsharpMask(radius=2, percent=180, threshold=1))
-        bits = floyd_steinberg(np.asarray(gray))
-        active = ~bits
-    else:
-        gray = ImageOps.autocontrast(gray, cutoff=1)
-        gray = ImageEnhance.Contrast(gray).enhance(1.35)
-        gray = gray.filter(ImageFilter.UnsharpMask(radius=2, percent=160, threshold=1))
-        bits = floyd_steinberg(np.asarray(gray))
-        active = ~bits
+    
+    # Background mask to eliminate noise outside the subject
+    mask = np.ones((340, 300), dtype=bool)
+    for y in range(340):
+        for x in range(300):
+            if x < 55 and y < 150:
+                mask[y, x] = False
+            if x > 250 and y < 120:
+                mask[y, x] = False
+
+    # Enhance facial feature contrast
+    gray_img = ImageOps.autocontrast(gray, cutoff=1)
+    gray_img = ImageEnhance.Contrast(gray_img).enhance(1.8)
+    sharp = gray_img.filter(ImageFilter.UnsharpMask(radius=2, percent=240, threshold=1))
+    
+    bits = floyd_steinberg(np.asarray(sharp))
+    active = ~bits & mask
 
     ys, xs = np.where(active)
     if len(xs) == 0:
         return np.zeros((0, 2), dtype=np.float32)
 
+    # Offset to VISUAL.MAP box (x=74, y=154)
     points = np.column_stack((74 + xs, 154 + ys)).astype(np.float32)
     
-    target_count = 2000
+    # High target density (3600 points for super crisp, sharp portrait)
+    target_count = 3600
     if len(points) > target_count:
         indices = rng.choice(len(points), size=target_count, replace=False)
         points = points[indices]
 
     return points
-
-
-def generate_k8s_wheel_points(count: int, seed: int = 42) -> np.ndarray:
-    """Generate points forming a Kubernetes 7-spoke helm wheel in VISUAL.MAP."""
-    rng = np.random.default_rng(seed)
-    cx, cy = 224, 324
-    pts = []
-    
-    for i in range(count):
-        r_type = rng.random()
-        if r_type < 0.4:
-            radius = 110 + rng.uniform(-3, 3)
-            angle = rng.uniform(0, 2 * math.pi)
-        elif r_type < 0.7:
-            spoke = rng.integers(0, 7)
-            angle = spoke * (2 * math.pi / 7) + rng.uniform(-0.05, 0.05)
-            radius = rng.uniform(30, 110)
-        elif r_type < 0.9:
-            radius = 35 + rng.uniform(-2, 2)
-            angle = rng.uniform(0, 2 * math.pi)
-        else:
-            radius = rng.uniform(0, 25)
-            angle = rng.uniform(0, 2 * math.pi)
-            
-        px = cx + radius * math.cos(angle)
-        py = cy + radius * math.sin(angle)
-        pts.append([px, py])
-
-    return np.array(pts, dtype=np.float32)
 
 
 def generate_svg(theme_name: str) -> str:
@@ -166,9 +143,8 @@ def generate_svg(theme_name: str) -> str:
     
     portrait_pts = extract_portrait_points(theme_name)
     N = len(portrait_pts)
-    k8s_pts = generate_k8s_wheel_points(N)
     
-    num_groups = 10
+    num_groups = 12
     group_size = N // num_groups
     
     path_groups_html = []
@@ -178,7 +154,6 @@ def generate_svg(theme_name: str) -> str:
         idx_end = (g + 1) * group_size if g < num_groups - 1 else N
         
         g_port = portrait_pts[idx_start:idx_end]
-        g_k8s = k8s_pts[idx_start:idx_end]
         
         d_cmds = []
         for pt in g_port:
@@ -186,26 +161,29 @@ def generate_svg(theme_name: str) -> str:
             d_cmds.append(f"M{x} {y}h1")
         path_d = "".join(d_cmds)
         
-        scatter_dx = float(rng.uniform(-35, 35))
-        scatter_dy = float(rng.uniform(-40, 40))
-        
-        mean_port = np.mean(g_port, axis=0)
-        mean_k8s = np.mean(g_k8s, axis=0)
-        morph_dx = float(mean_k8s[0] - mean_port[0])
-        morph_dy = float(mean_k8s[1] - mean_port[1])
+        # Fast, subtle particle motion offsets
+        scatter_dx = float(rng.uniform(-14, 14))
+        scatter_dy = float(rng.uniform(-16, 16))
+        pulse_dx = float(rng.uniform(-8, 8))
+        pulse_dy = float(rng.uniform(-10, 10))
         
         stroke_color = theme["portrait"] if g % 3 != 0 else theme["portrait_secondary"]
         
-        path_html = f'''      <path d="{path_d}" fill="none" stroke="{stroke_color}" stroke-width="1" opacity="0.92">
+        # Keyframe timing (8.0s total):
+        # 0s - 0.5s: Fast snap assembly into crisp portrait
+        # 0.5s - 6.0s: SOLID CRISP PORTRAIT HOLD (80% of time)
+        # 6.0s - 7.2s: Subtle live dot pulse wave
+        # 7.2s - 8.0s: Fast snap back to crisp portrait
+        path_html = f'''      <path d="{path_d}" fill="none" stroke="{stroke_color}" stroke-width="1.2" opacity="0.95">
         <animateTransform attributeName="transform" type="translate"
           begin="0s" dur="{LOOP_SECONDS}s" repeatCount="indefinite" calcMode="spline"
-          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
-          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
-          values="{scatter_dx:.1f} {scatter_dy:.1f}; 0 0; 0 0; {morph_dx:.1f} {morph_dy:.1f}; 0 0; 0 0" />
+          keyTimes="0; 0.06; 0.75; 0.90; 1.0"
+          keySplines="0.25 0.1 0.25 1; 0.25 0.1 0.25 1; 0.25 0.1 0.25 1; 0.25 0.1 0.25 1"
+          values="{scatter_dx:.1f} {scatter_dy:.1f}; 0 0; 0 0; {pulse_dx:.1f} {pulse_dy:.1f}; 0 0" />
         <animate attributeName="opacity"
           begin="0s" dur="{LOOP_SECONDS}s" repeatCount="indefinite"
-          keyTimes="0; 0.12; 0.50; 0.70; 0.85; 1.0"
-          values="0.2; 0.95; 0.95; 0.85; 0.95; 0.95" />
+          keyTimes="0; 0.06; 0.75; 0.90; 1.0"
+          values="0.4; 0.95; 0.95; 0.85; 0.95" />
       </path>'''
         path_groups_html.append(path_html)
 
