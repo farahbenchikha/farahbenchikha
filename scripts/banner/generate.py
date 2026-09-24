@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate animated SVG GitHub profile banners for Farah Ben Chikha.
-Style: Hexagonal Cloud Hologram / High-Tech Cyber HUD with perfectly centered HD portrait.
+Style: Sleek Rectangular Cyber HUD Card with HD Centered Portrait.
 
 Run from repository root:
     python scripts/banner/generate.py
@@ -11,9 +11,8 @@ from __future__ import annotations
 import base64
 import html
 import io
-import math
 from pathlib import Path
-from PIL import Image, ImageEnhance, ImageOps
+from PIL import Image, ImageEnhance
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "assets"
@@ -67,15 +66,15 @@ ROWS = [
 
 
 def prepare_photo_base64() -> str:
-    """Crop and encode Farah's face & smiling portrait perfectly centered into a sharp base64 JPEG."""
+    """Crop and encode Farah's face & smile portrait centered into a sharp rectangular base64 JPEG."""
     source = Image.open(SOURCE).convert("RGB")
     w, h = source.size
     
-    # Exact crop centered on Farah's face, hair, and smile
+    # Exact crop centered on Farah's face & smile
     crop = source.crop((int(w * 0.15), int(h * 0.32), int(w * 0.85), int(h * 0.65)))
-    crop = crop.resize((360, 410), Image.Resampling.LANCZOS)
+    crop = crop.resize((320, 390), Image.Resampling.LANCZOS)
     
-    # Enhance sharpness & vibrant contrast for hologram frame
+    # Enhance sharpness & vibrant contrast for rectangular HUD card
     crop = ImageEnhance.Contrast(crop).enhance(1.08)
     crop = ImageEnhance.Sharpness(crop).enhance(1.25)
     
@@ -87,28 +86,10 @@ def prepare_photo_base64() -> str:
 def generate_svg(theme_name: str, b64_photo: str) -> str:
     theme = THEMES[theme_name]
     
-    # Hexagon center and dimensions
-    cx, cy = 244, 334
-    
-    # Generate Hexagon path points (radius R=155)
-    r = 155
-    hex_pts = []
-    for i in range(6):
-        a = i * math.pi / 3 - math.pi / 6
-        x = cx + r * math.cos(a)
-        y = cy + r * math.sin(a)
-        hex_pts.append(f"{x:.1f},{y:.1f}")
-    hex_polygon_pts = " ".join(hex_pts)
-
-    # Outer HUD Ring Hexagon points (radius R=172)
-    r_outer = 172
-    hex_outer_pts = []
-    for i in range(6):
-        a = i * math.pi / 3 - math.pi / 6
-        x = cx + r_outer * math.cos(a)
-        y = cy + r_outer * math.sin(a)
-        hex_outer_pts.append(f"{x:.1f},{y:.1f}")
-    hex_outer_polygon_pts = " ".join(hex_outer_pts)
+    # Rectangular card dimensions and coordinates
+    card_x, card_y = 84, 139
+    card_w, card_h = 320, 390
+    card_rx = 12
 
     row_elements = []
     start_y = 148
@@ -134,9 +115,9 @@ def generate_svg(theme_name: str, b64_photo: str) -> str:
 
     svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <defs>
-    <!-- Hexagonal Clip Path for Photo -->
-    <clipPath id="hexClip">
-      <polygon points="{hex_polygon_pts}"/>
+    <!-- Rectangular Clip Path for Photo -->
+    <clipPath id="rectClip">
+      <rect x="{card_x}" y="{card_y}" width="{card_w}" height="{card_h}" rx="{card_rx}"/>
     </clipPath>
 
     <!-- Glowing Cyber Gradients -->
@@ -148,7 +129,7 @@ def generate_svg(theme_name: str, b64_photo: str) -> str:
 
     <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="{theme['cyan']}" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="{theme['purple']}" stroke-opacity="0.9"/>
+      <stop offset="100%" stop-color="{theme['purple']}" stop-opacity="0.9"/>
     </linearGradient>
   </defs>
 
@@ -169,54 +150,54 @@ def generate_svg(theme_name: str, b64_photo: str) -> str:
   <circle cx="1014" cy="38" r="4" fill="{theme['emerald']}"/>
   <text x="1026" y="42" fill="{theme['emerald']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" font-weight="700" letter-spacing="0.5">ONLINE · 100%</text>
 
-  <!-- Left Frame: HOLOGRAM.NODE -->
+  <!-- Left Frame: VISUAL.NODE -->
   <rect x="35" y="88" width="418" height="480" rx="6" fill="{theme['panel2']}" stroke="{theme['line']}"/>
   <path d="M35 124H453" stroke="{theme['line']}"/>
-  <text x="49" y="111" fill="{theme['cyan']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="700" letter-spacing="1.2">HOLOGRAM.NODE</text>
-  <text x="438" y="111" text-anchor="end" fill="{theme['muted']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11">HD PORTRAIT · CLOUD HUD</text>
+  <text x="49" y="111" fill="{theme['cyan']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="700" letter-spacing="1.2">VISUAL.NODE</text>
+  <text x="438" y="111" text-anchor="end" fill="{theme['muted']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11">HD PORTRAIT · CYBER HUD</text>
 
-  <!-- Frame Corners -->
+  <!-- Outer HUD Corner Brackets -->
   <path d="M49 141h14M49 141v14M439 141h-14M439 141v14M49 539h14M49 539v-14M439 539h-14M439 539v-14" fill="none" stroke="{theme['cyan']}" opacity="0.6" stroke-width="1.5"/>
 
-  <!-- Outer HUD Hexagon Ring with Rotation Pulse Animation -->
-  <polygon points="{hex_outer_polygon_pts}" fill="none" stroke="url(#cyberGrad)" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.7">
-    <animateTransform attributeName="transform" type="rotate" from="0 {cx} {cy}" to="360 {cx} {cy}" dur="25s" repeatCount="indefinite"/>
-  </polygon>
-
-  <!-- Hexagonal Photo Portrait -->
-  <g clip-path="url(#hexClip)">
-    <image href="data:image/jpeg;base64,{b64_photo}" x="{cx - 180}" y="{cy - 205}" width="360" height="410" preserveAspectRatio="xMidYMid slice"/>
+  <!-- Rectangular Photo Card with Clip Path -->
+  <g clip-path="url(#rectClip)">
+    <image href="data:image/jpeg;base64,{b64_photo}" x="{card_x}" y="{card_y}" width="{card_w}" height="{card_h}" preserveAspectRatio="xMidYMid slice"/>
     
     <!-- Subtle Cyber Tint Overlay -->
-    <polygon points="{hex_polygon_pts}" fill="{theme['cyan']}" opacity="0.04"/>
+    <rect x="{card_x}" y="{card_y}" width="{card_w}" height="{card_h}" rx="{card_rx}" fill="{theme['cyan']}" opacity="0.03"/>
   </g>
 
-  <!-- Inner Hexagon Neon Border -->
-  <polygon points="{hex_polygon_pts}" fill="none" stroke="url(#neonGlow)" stroke-width="3"/>
+  <!-- Inner Rectangular Neon Border -->
+  <rect x="{card_x}" y="{card_y}" width="{card_w}" height="{card_h}" rx="{card_rx}" fill="none" stroke="url(#neonGlow)" stroke-width="2.5"/>
 
-  <!-- Tech Floating HUD Badges around Hexagon -->
-  <g transform="translate({cx - 145}, {cy - 140})">
-    <rect width="78" height="22" rx="11" fill="{theme['badge_bg']}" stroke="{theme['cyan']}" stroke-width="1"/>
-    <text x="39" y="15" text-anchor="middle" fill="{theme['cyan']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="10.5" font-weight="700">☸ Kubernetes</text>
+  <!-- Outer Animated HUD Dash Border -->
+  <rect x="{card_x - 6}" y="{card_y - 6}" width="{card_w + 12}" height="{card_h + 12}" rx="{card_rx + 4}" fill="none" stroke="url(#cyberGrad)" stroke-width="1.2" stroke-dasharray="8 6" opacity="0.65">
+    <animate attributeName="stroke-dashoffset" from="0" to="28" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Tech Floating HUD Badges positioned at 4 corners of Rectangular Card -->
+  <g transform="translate({card_x + 10}, {card_y + 12})">
+    <rect width="86" height="22" rx="11" fill="{theme['badge_bg']}" stroke="{theme['cyan']}" stroke-width="1" opacity="0.9"/>
+    <text x="43" y="15" text-anchor="middle" fill="{theme['cyan']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="10.5" font-weight="700">☸ Kubernetes</text>
   </g>
 
-  <g transform="translate({cx + 70}, {cy - 140})">
-    <rect width="72" height="22" rx="11" fill="{theme['badge_bg']}" stroke="{theme['purple']}" stroke-width="1"/>
-    <text x="36" y="15" text-anchor="middle" fill="{theme['purple']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="10.5" font-weight="700">☁️ Cloud</text>
+  <g transform="translate({card_x + card_w - 90}, {card_y + 12})">
+    <rect width="78" height="22" rx="11" fill="{theme['badge_bg']}" stroke="{theme['purple']}" stroke-width="1" opacity="0.9"/>
+    <text x="39" y="15" text-anchor="middle" fill="{theme['purple']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="10.5" font-weight="700">☁️ Cloud</text>
   </g>
 
-  <g transform="translate({cx - 145}, {cy + 120})">
-    <rect width="82" height="22" rx="11" fill="{theme['badge_bg']}" stroke="{theme['emerald']}" stroke-width="1"/>
-    <text x="41" y="15" text-anchor="middle" fill="{theme['emerald']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="10.5" font-weight="700">🔐 DevSecOps</text>
+  <g transform="translate({card_x + 10}, {card_y + card_h - 34})">
+    <rect width="90" height="22" rx="11" fill="{theme['badge_bg']}" stroke="{theme['emerald']}" stroke-width="1" opacity="0.9"/>
+    <text x="45" y="15" text-anchor="middle" fill="{theme['emerald']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="10.5" font-weight="700">🔐 DevSecOps</text>
   </g>
 
-  <g transform="translate({cx + 65}, {cy + 120})">
-    <rect width="68" height="22" rx="11" fill="{theme['badge_bg']}" stroke="{theme['cyan']}" stroke-width="1"/>
-    <text x="34" y="15" text-anchor="middle" fill="{theme['cyan']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="10.5" font-weight="700">🤖 AIOps</text>
+  <g transform="translate({card_x + card_w - 82}, {card_y + card_h - 34})">
+    <rect width="72" height="22" rx="11" fill="{theme['badge_bg']}" stroke="{theme['cyan']}" stroke-width="1" opacity="0.9"/>
+    <text x="36" y="15" text-anchor="middle" fill="{theme['cyan']}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="10.5" font-weight="700">🤖 AIOps</text>
   </g>
 
-  <!-- Live Pulse Dot at Hexagon Base -->
-  <circle cx="{cx}" cy="{cy + 165}" r="4" fill="{theme['cyan']}">
+  <!-- Live Pulse Dot at Card Base -->
+  <circle cx="{card_x + card_w / 2}" cy="{card_y + card_h + 18}" r="4" fill="{theme['cyan']}">
     <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
   </circle>
 
@@ -237,20 +218,20 @@ def generate_svg(theme_name: str, b64_photo: str) -> str:
 def main():
     ASSETS.mkdir(parents=True, exist_ok=True)
     
-    print("Preparing base64 photo encoding (perfect face & smile crop)...")
+    print("Preparing base64 photo encoding (centered face & smile)...")
     b64_photo = prepare_photo_base64()
     
-    print("Generating banner-dark.svg (Perfect Face Hologram)...")
+    print("Generating banner-dark.svg (Rectangular Cyber HUD Card)...")
     dark_svg = generate_svg("dark", b64_photo)
     (ASSETS / "banner-dark.svg").write_text(dark_svg, encoding="utf-8")
     print(f"Wrote {ASSETS / 'banner-dark.svg'} ({len(dark_svg)} bytes)")
 
-    print("Generating banner-light.svg (Perfect Face Hologram)...")
+    print("Generating banner-light.svg (Rectangular Cyber HUD Card)...")
     light_svg = generate_svg("light", b64_photo)
     (ASSETS / "banner-light.svg").write_text(light_svg, encoding="utf-8")
     print(f"Wrote {ASSETS / 'banner-light.svg'} ({len(light_svg)} bytes)")
 
-    print("Perfect Face Hologram Banner generation complete!")
+    print("Rectangular Cyber HUD Card Banner generation complete!")
 
 
 if __name__ == "__main__":
