@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate animated SVG GitHub profile banners for Farah Ben Chikha.
-Style: Sleek Rectangular Cyber HUD Card with HD Centered Portrait.
+Style: Sleek Rectangular Cyber HUD Card with Natural Unzoomed HD Portrait.
 
 Run from repository root:
     python scripts/banner/generate.py
@@ -66,12 +66,12 @@ ROWS = [
 
 
 def prepare_photo_base64() -> str:
-    """Crop and encode Farah's face & smile portrait centered into a sharp rectangular base64 JPEG."""
+    """Crop and encode Farah's portrait with natural unzoomed framing into a sharp base64 JPEG."""
     source = Image.open(SOURCE).convert("RGB")
     w, h = source.size
     
-    # Exact crop centered on Farah's face & smile
-    crop = source.crop((int(w * 0.15), int(h * 0.32), int(w * 0.85), int(h * 0.65)))
+    # Natural unzoomed crop showing head, hair, shoulders and upper body balanced
+    crop = source.crop((int(w * 0.08), int(h * 0.26), int(w * 0.92), int(h * 0.74)))
     crop = crop.resize((320, 390), Image.Resampling.LANCZOS)
     
     # Enhance sharpness & vibrant contrast for rectangular HUD card
@@ -218,20 +218,20 @@ def generate_svg(theme_name: str, b64_photo: str) -> str:
 def main():
     ASSETS.mkdir(parents=True, exist_ok=True)
     
-    print("Preparing base64 photo encoding (centered face & smile)...")
+    print("Preparing base64 photo encoding (natural unzoomed framing)...")
     b64_photo = prepare_photo_base64()
     
-    print("Generating banner-dark.svg (Rectangular Cyber HUD Card)...")
+    print("Generating banner-dark.svg (Natural Framing Card)...")
     dark_svg = generate_svg("dark", b64_photo)
     (ASSETS / "banner-dark.svg").write_text(dark_svg, encoding="utf-8")
     print(f"Wrote {ASSETS / 'banner-dark.svg'} ({len(dark_svg)} bytes)")
 
-    print("Generating banner-light.svg (Rectangular Cyber HUD Card)...")
+    print("Generating banner-light.svg (Natural Framing Card)...")
     light_svg = generate_svg("light", b64_photo)
     (ASSETS / "banner-light.svg").write_text(light_svg, encoding="utf-8")
     print(f"Wrote {ASSETS / 'banner-light.svg'} ({len(light_svg)} bytes)")
 
-    print("Rectangular Cyber HUD Card Banner generation complete!")
+    print("Natural Framing Card Banner generation complete!")
 
 
 if __name__ == "__main__":
