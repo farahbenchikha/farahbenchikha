@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate animated SVG GitHub profile banners for Farah Ben Chikha.
-Style: Hexagonal Cloud Hologram / High-Tech Cyber HUD with centered HD portrait.
+Style: Hexagonal Cloud Hologram / High-Tech Cyber HUD with perfectly centered HD portrait.
 
 Run from repository root:
     python scripts/banner/generate.py
@@ -67,12 +67,12 @@ ROWS = [
 
 
 def prepare_photo_base64() -> str:
-    """Crop and encode Farah's face & blazer portrait centered into a sharp base64 JPEG."""
+    """Crop and encode Farah's face & smiling portrait perfectly centered into a sharp base64 JPEG."""
     source = Image.open(SOURCE).convert("RGB")
     w, h = source.size
     
-    # Precise crop around Farah in black blazer (bottom half of source photo)
-    crop = source.crop((int(w * 0.15), int(h * 0.44), int(w * 0.85), int(h * 0.95)))
+    # Exact crop centered on Farah's face, hair, and smile
+    crop = source.crop((int(w * 0.15), int(h * 0.32), int(w * 0.85), int(h * 0.65)))
     crop = crop.resize((360, 410), Image.Resampling.LANCZOS)
     
     # Enhance sharpness & vibrant contrast for hologram frame
@@ -237,20 +237,20 @@ def generate_svg(theme_name: str, b64_photo: str) -> str:
 def main():
     ASSETS.mkdir(parents=True, exist_ok=True)
     
-    print("Preparing base64 photo encoding (blazer photo in bottom half)...")
+    print("Preparing base64 photo encoding (perfect face & smile crop)...")
     b64_photo = prepare_photo_base64()
     
-    print("Generating banner-dark.svg (Blazer Photo Centered)...")
+    print("Generating banner-dark.svg (Perfect Face Hologram)...")
     dark_svg = generate_svg("dark", b64_photo)
     (ASSETS / "banner-dark.svg").write_text(dark_svg, encoding="utf-8")
     print(f"Wrote {ASSETS / 'banner-dark.svg'} ({len(dark_svg)} bytes)")
 
-    print("Generating banner-light.svg (Blazer Photo Centered)...")
+    print("Generating banner-light.svg (Perfect Face Hologram)...")
     light_svg = generate_svg("light", b64_photo)
     (ASSETS / "banner-light.svg").write_text(light_svg, encoding="utf-8")
     print(f"Wrote {ASSETS / 'banner-light.svg'} ({len(light_svg)} bytes)")
 
-    print("Blazer Photo Centered Banner generation complete!")
+    print("Perfect Face Hologram Banner generation complete!")
 
 
 if __name__ == "__main__":
