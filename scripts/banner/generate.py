@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate animated SVG GitHub profile banners for Farah Ben Chikha.
-Style: Hexagonal Cloud Hologram / High-Tech Cyber HUD with photorealistic HD portrait.
+Style: Hexagonal Cloud Hologram / High-Tech Cyber HUD with centered HD portrait.
 
 Run from repository root:
     python scripts/banner/generate.py
@@ -67,17 +67,17 @@ ROWS = [
 
 
 def prepare_photo_base64() -> str:
-    """Crop and encode Farah's portrait into a sharp base64 JPEG."""
+    """Crop and encode Farah's portrait (black blazer photo) centered into a sharp base64 JPEG."""
     source = Image.open(SOURCE).convert("RGB")
     w, h = source.size
     
-    # Tight crop around Farah's face & shoulders
-    crop = source.crop((int(w * 0.15), int(h * 0.05), int(w * 0.85), int(h * 0.75)))
+    # Perfectly center crop around Farah's face & shoulders (black blazer photo)
+    crop = source.crop((int(w * 0.05), int(h * 0.01), int(w * 0.95), int(h * 0.49)))
     crop = crop.resize((360, 410), Image.Resampling.LANCZOS)
     
-    # Enhance sharpness & vibrant contrast slightly for hologram frame
-    crop = ImageEnhance.Contrast(crop).enhance(1.1)
-    crop = ImageEnhance.Sharpness(crop).enhance(1.3)
+    # Enhance sharpness & vibrant contrast for hologram frame
+    crop = ImageEnhance.Contrast(crop).enhance(1.08)
+    crop = ImageEnhance.Sharpness(crop).enhance(1.25)
     
     buf = io.BytesIO()
     crop.save(buf, format="JPEG", quality=92)
@@ -188,7 +188,7 @@ def generate_svg(theme_name: str, b64_photo: str) -> str:
     <image href="data:image/jpeg;base64,{b64_photo}" x="{cx - 180}" y="{cy - 205}" width="360" height="410" preserveAspectRatio="xMidYMid slice"/>
     
     <!-- Subtle Cyber Tint Overlay -->
-    <polygon points="{hex_polygon_pts}" fill="{theme['cyan']}" opacity="0.05"/>
+    <polygon points="{hex_polygon_pts}" fill="{theme['cyan']}" opacity="0.04"/>
   </g>
 
   <!-- Inner Hexagon Neon Border -->
@@ -237,15 +237,15 @@ def generate_svg(theme_name: str, b64_photo: str) -> str:
 def main():
     ASSETS.mkdir(parents=True, exist_ok=True)
     
-    print("Preparing base64 photo encoding...")
+    print("Preparing base64 photo encoding (centered blazer portrait)...")
     b64_photo = prepare_photo_base64()
     
-    print("Generating banner-dark.svg (Hexagonal Hologram Cloud)...")
+    print("Generating banner-dark.svg (Centered Hexagonal Hologram)...")
     dark_svg = generate_svg("dark", b64_photo)
     (ASSETS / "banner-dark.svg").write_text(dark_svg, encoding="utf-8")
     print(f"Wrote {ASSETS / 'banner-dark.svg'} ({len(dark_svg)} bytes)")
 
-    print("Generating banner-light.svg (Hexagonal Hologram Cloud)...")
+    print("Generating banner-light.svg (Centered Hexagonal Hologram)...")
     light_svg = generate_svg("light", b64_photo)
     (ASSETS / "banner-light.svg").write_text(light_svg, encoding="utf-8")
     print(f"Wrote {ASSETS / 'banner-light.svg'} ({len(light_svg)} bytes)")
