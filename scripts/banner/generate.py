@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate animated SVG GitHub profile banners for Farah Ben Chikha.
-Style: Hexagonal Cloud Hologram / High-Tech Cyber HUD with perfectly centered HD portrait.
+Style: Hexagonal Cloud Hologram / High-Tech Cyber HUD with centered HD portrait.
 
 Run from repository root:
     python scripts/banner/generate.py
@@ -71,8 +71,8 @@ def prepare_photo_base64() -> str:
     source = Image.open(SOURCE).convert("RGB")
     w, h = source.size
     
-    # Precise crop centered on Farah's face & shoulders (left side of photo)
-    crop = source.crop((int(w * 0.12), int(h * 0.16), int(w * 0.68), int(h * 0.58)))
+    # Precise crop around Farah in black blazer (bottom half of source photo)
+    crop = source.crop((int(w * 0.15), int(h * 0.44), int(w * 0.85), int(h * 0.95)))
     crop = crop.resize((360, 410), Image.Resampling.LANCZOS)
     
     # Enhance sharpness & vibrant contrast for hologram frame
@@ -148,7 +148,7 @@ def generate_svg(theme_name: str, b64_photo: str) -> str:
 
     <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="{theme['cyan']}" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="{theme['purple']}" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="{theme['purple']}" stroke-opacity="0.9"/>
     </linearGradient>
   </defs>
 
@@ -237,20 +237,20 @@ def generate_svg(theme_name: str, b64_photo: str) -> str:
 def main():
     ASSETS.mkdir(parents=True, exist_ok=True)
     
-    print("Preparing base64 photo encoding (precise centered face crop)...")
+    print("Preparing base64 photo encoding (blazer photo in bottom half)...")
     b64_photo = prepare_photo_base64()
     
-    print("Generating banner-dark.svg (Centered Face Hologram)...")
+    print("Generating banner-dark.svg (Blazer Photo Centered)...")
     dark_svg = generate_svg("dark", b64_photo)
     (ASSETS / "banner-dark.svg").write_text(dark_svg, encoding="utf-8")
     print(f"Wrote {ASSETS / 'banner-dark.svg'} ({len(dark_svg)} bytes)")
 
-    print("Generating banner-light.svg (Centered Face Hologram)...")
+    print("Generating banner-light.svg (Blazer Photo Centered)...")
     light_svg = generate_svg("light", b64_photo)
     (ASSETS / "banner-light.svg").write_text(light_svg, encoding="utf-8")
     print(f"Wrote {ASSETS / 'banner-light.svg'} ({len(light_svg)} bytes)")
 
-    print("Centered Face Hologram Banner generation complete!")
+    print("Blazer Photo Centered Banner generation complete!")
 
 
 if __name__ == "__main__":
