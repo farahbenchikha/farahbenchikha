@@ -2,9 +2,9 @@
 
 <!-- BANNER - terminal farah.sh --live -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/main/assets/banner-dark.svg?v=25">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/main/assets/banner-light.svg?v=25">
-  <img src="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/main/assets/banner-dark.svg?v=25" width="100%" alt="farah.sh --live">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/db77676dfbeb3f1b8ea6de408b8c88873fb92789/assets/banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/db77676dfbeb3f1b8ea6de408b8c88873fb92789/assets/banner-light.svg">
+  <img src="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/db77676dfbeb3f1b8ea6de408b8c88873fb92789/assets/banner-dark.svg" width="100%" alt="farah.sh --live">
 </picture>
 
 <br>
