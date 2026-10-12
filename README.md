@@ -2,17 +2,12 @@
 
 <!-- BANNER - terminal farah.sh --live -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/main/assets/banner-dark.svg?v=11">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/main/assets/banner-light.svg?v=11">
-  <img src="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/main/assets/banner-dark.svg?v=11" width="100%" alt="farah.sh --live">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/main/assets/banner-dark.svg?v=25">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/main/assets/banner-light.svg?v=25">
+  <img src="https://raw.githubusercontent.com/farahbenchikha/farahbenchikha/main/assets/banner-dark.svg?v=25" width="100%" alt="farah.sh --live">
 </picture>
 
-<br><br>
-
-<!-- PROFILE PHOTO -->
-<img src="assets/profile.jpg" width="160" height="160" style="border-radius: 50%; object-fit: cover; border: 3px solid #38bdf8; box-shadow: 0px 4px 15px rgba(56, 189, 248, 0.3);" alt="Farah Ben Chikha"/>
-
-<br><br>
+<br>
 
 <!-- ANIMATED TYPING HEADER -->
 <a href="https://github.com/farahbenchikha">
@@ -219,3 +214,31 @@ Active IEEE member participating in technical, community, and social impact proj
 │  🤖 SOVEREIGN RAG & AI-DRIVEN INFRASTRUCTURE RESILIENCE │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
+```
+
+---
+
+## `CONTACT`
+
+<div align="center">
+
+### Looking for a PFE Opportunity in Cloud & DevOps
+
+**January 2027 · 6 Months Internship**
+
+<br>
+
+<a href="https://www.linkedin.com/in/farahbenchikha/">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>&nbsp;&nbsp;
+<a href="https://github.com/farahbenchikha">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+</a>
+
+<br><br>
+
+`farah.sh --live`
+
+**Build infrastructure. Automate everything. Make systems intelligent.**
+
+</div>
